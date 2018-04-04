@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,9 +16,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-        return true
+    func application(_ application: UIApplication,
+                     didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?)
+        -> Bool {
+            FirebaseApp.configure()
+            return true
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
@@ -65,7 +68,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                  * The persistent store is not accessible, due to permissions or data protection when the device is locked.
                  * The device is out of space.
                  * The store could not be migrated to the current model version.
-                 Check the error message to determine what the actual problem was.
+                 Check the error message to determine what the actual problem was. test
                  */
                 fatalError("Unresolved error \(error), \(error.userInfo)")
             }
@@ -90,4 +93,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 }
+
+
 
