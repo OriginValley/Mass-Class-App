@@ -5,10 +5,16 @@ target 'Mass Class App' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
 
-pod 'Firebase/Core'
-
   # Pods for Mass Class App
 
+pod 'Firebase/Core'
+pod 'FirebaseUI'
+pod 'Firebase/Auth'
+pod 'FBSDKCoreKit'
+pod 'FBSDKLoginKit'
+pod 'FacebookCore'
+pod 'FacebookLogin'
+pod 'FacebookShare'
 
   target 'Mass Class AppTests' do
     inherit! :search_paths
