@@ -1,18 +1,21 @@
 //
-//  ViewController.swift
-//  Mass Class App
+//  Mass Class Actions
 //
-//  Created by Victor Orourke on 4/2/18.
+//  Created by Victor ORourke.
 //  Copyright © 2018 Origin Valley. All rights reserved.
 //
 
 import UIKit
+import Firebase
+import FirebaseAuth
 
-class ViewController: UIViewController {
+
+class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,6 +24,7 @@ class ViewController: UIViewController {
     }
     
 
-
+    @IBAction func logOutAction(sender: AnyObject) {
+        
+    }
 }
-
