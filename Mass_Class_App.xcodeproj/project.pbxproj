@@ -10,6 +10,12 @@
 		343E30076266A382C1F13666 /* Pods_Mass_Class_AppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 711035FC11D70F065543791C /* Pods_Mass_Class_AppTests.framework */; };
 		4D3BF99E2152AD2B3ED0055F /* Pods_Mass_Class_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2491139F46071B002A2D1CE /* Pods_Mass_Class_App.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		595D8A4AB3196B42AEE47679 /* Pods_Mass_Class_AppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9978E962F8A76DE4D04842B6 /* Pods_Mass_Class_AppUITests.framework */; };
+		6B0D3DC2208460ED00AB3F1E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6B0D3DC1208460ED00AB3F1E /* GoogleService-Info.plist */; };
+		6B0D3DC5208467C100AB3F1E /* MCAAuthPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0D3DC4208467C100AB3F1E /* MCAAuthPickerViewController.swift */; };
+		6B0D3DC820853A8C00AB3F1E /* MCAAuthPickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B0D3DC720853A8C00AB3F1E /* MCAAuthPickerView.xib */; };
+		6B0D3DDD20854C0E00AB3F1E /* MCAAuthPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0D3DDC20854C0E00AB3F1E /* MCAAuthPickerView.swift */; };
+		6B0D3DDF20854C3D00AB3F1E /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0D3DDE20854C3D00AB3F1E /* UIViewExtension.swift */; };
+		6B16B1D520845F9E00A2DDC2 /* MCAAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B16B1D420845F9E00A2DDC2 /* MCAAuth.swift */; };
 		D129657D2079B97B0005414B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D129657C2079B97B0005414B /* HomeViewController.swift */; };
 		D129657F2079B9840005414B /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D129657E2079B9840005414B /* SignUpViewController.swift */; };
 		D12965812079B98A0005414B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12965802079B98A0005414B /* LoginViewController.swift */; };
@@ -49,6 +55,13 @@
 		2680F5B5535916BD4BE14E56 /* Pods-Mass Class AppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mass Class AppUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Mass Class AppUITests/Pods-Mass Class AppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		2A1461F172D58BC5503E1DC7 /* Pods-Mass Class AppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mass Class AppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Mass Class AppTests/Pods-Mass Class AppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		609733BCEE07A2CBD715EE69 /* Pods-Mass Class AppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mass Class AppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Mass Class AppTests/Pods-Mass Class AppTests.release.xcconfig"; sourceTree = "<group>"; };
+		6B0D3DC1208460ED00AB3F1E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		6B0D3DC4208467C100AB3F1E /* MCAAuthPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCAAuthPickerViewController.swift; sourceTree = "<group>"; };
+		6B0D3DC720853A8C00AB3F1E /* MCAAuthPickerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MCAAuthPickerView.xib; sourceTree = "<group>"; };
+		6B0D3DDB2085490700AB3F1E /* Mass Class App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Mass Class App.entitlements"; sourceTree = "<group>"; };
+		6B0D3DDC20854C0E00AB3F1E /* MCAAuthPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCAAuthPickerView.swift; sourceTree = "<group>"; };
+		6B0D3DDE20854C3D00AB3F1E /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		6B16B1D420845F9E00A2DDC2 /* MCAAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCAAuth.swift; sourceTree = "<group>"; };
 		6CC94D75F4C22DA50318F5FE /* Pods-Mass Class App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mass Class App.release.xcconfig"; path = "Pods/Target Support Files/Pods-Mass Class App/Pods-Mass Class App.release.xcconfig"; sourceTree = "<group>"; };
 		711035FC11D70F065543791C /* Pods_Mass_Class_AppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mass_Class_AppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9978E962F8A76DE4D04842B6 /* Pods_Mass_Class_AppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mass_Class_AppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -140,15 +153,22 @@
 		D1838D072072D1E6005F5E71 /* Mass Class App */ = {
 			isa = PBXGroup;
 			children = (
+				6B0D3DDB2085490700AB3F1E /* Mass Class App.entitlements */,
+				6B0D3DC1208460ED00AB3F1E /* GoogleService-Info.plist */,
 				D1838D082072D1E6005F5E71 /* AppDelegate.swift */,
 				D147D94E207A8F5A003D4FD4 /* WelcomeViewController.swift */,
+				6B0D3DC4208467C100AB3F1E /* MCAAuthPickerViewController.swift */,
 				D129657E2079B9840005414B /* SignUpViewController.swift */,
 				D129657C2079B97B0005414B /* HomeViewController.swift */,
+				6B16B1D420845F9E00A2DDC2 /* MCAAuth.swift */,
 				D12965802079B98A0005414B /* LoginViewController.swift */,
 				D12965822079B9920005414B /* ResetPasswordViewController.swift */,
 				D1838D0A2072D1E6005F5E71 /* ViewController.swift */,
 				D1DCC18D2084133400C55C44 /* User.swift */,
 				D12965842079B9A30005414B /* Main.storyboard */,
+				6B0D3DC720853A8C00AB3F1E /* MCAAuthPickerView.xib */,
+				6B0D3DDC20854C0E00AB3F1E /* MCAAuthPickerView.swift */,
+				6B0D3DDE20854C3D00AB3F1E /* UIViewExtension.swift */,
 				D1DCC18B2083F13F00C55C44 /* Settings.bundle */,
 				D1838D122072D1E6005F5E71 /* Assets.xcassets */,
 				D1838D142072D1E6005F5E71 /* LaunchScreen.storyboard */,
@@ -267,6 +287,11 @@
 					D1838D042072D1E6005F5E71 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 					D1838D1B2072D1E6005F5E71 = {
 						CreatedOnToolsVersion = 9.2;
@@ -305,9 +330,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B0D3DC2208460ED00AB3F1E /* GoogleService-Info.plist in Resources */,
 				D1838D162072D1E6005F5E71 /* LaunchScreen.storyboard in Resources */,
 				D1838D132072D1E6005F5E71 /* Assets.xcassets in Resources */,
 				D1DCC18C2083F13F00C55C44 /* Settings.bundle in Resources */,
+				6B0D3DC820853A8C00AB3F1E /* MCAAuthPickerView.xib in Resources */,
 				D12965852079B9A30005414B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -541,6 +568,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D12965812079B98A0005414B /* LoginViewController.swift in Sources */,
+				6B0D3DC5208467C100AB3F1E /* MCAAuthPickerViewController.swift in Sources */,
 				D147D94F207A8F5A003D4FD4 /* WelcomeViewController.swift in Sources */,
 				D1838D112072D1E6005F5E71 /* Mass_Class_App.xcdatamodeld in Sources */,
 				D1838D0B2072D1E6005F5E71 /* ViewController.swift in Sources */,
@@ -548,7 +576,10 @@
 				D1DCC18E2084133400C55C44 /* User.swift in Sources */,
 				D129657D2079B97B0005414B /* HomeViewController.swift in Sources */,
 				D129657F2079B9840005414B /* SignUpViewController.swift in Sources */,
+				6B0D3DDF20854C3D00AB3F1E /* UIViewExtension.swift in Sources */,
 				D12965832079B9920005414B /* ResetPasswordViewController.swift in Sources */,
+				6B0D3DDD20854C0E00AB3F1E /* MCAAuthPickerView.swift in Sources */,
+				6B16B1D520845F9E00A2DDC2 /* MCAAuth.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -707,8 +738,9 @@
 			baseConfigurationReference = 032E73BE8033512ED2AD52A6 /* Pods-Mass Class App.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Mass Class App/Mass Class App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = BFYS65G6PH;
+				DEVELOPMENT_TEAM = 8K7R4W5UEW;
 				INFOPLIST_FILE = "Mass Class App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
@@ -724,8 +756,9 @@
 			baseConfigurationReference = 6CC94D75F4C22DA50318F5FE /* Pods-Mass Class App.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Mass Class App/Mass Class App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = BFYS65G6PH;
+				DEVELOPMENT_TEAM = 8K7R4W5UEW;
 				INFOPLIST_FILE = "Mass Class App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.victororourke.Mass-Class-App";

@@ -15,6 +15,7 @@ pod 'FBSDKLoginKit'
 pod 'FacebookCore'
 pod 'FacebookLogin'
 pod 'FacebookShare'
+pod 'TwitterKit'
 
   target 'Mass Class AppTests' do
     inherit! :search_paths
