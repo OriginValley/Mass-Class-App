@@ -545,7 +545,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
-                    <navigationItem key="navigationItem" id="MTS-PQ-kIU"/>
+                    <navigationItem key="navigationItem" id="MTS-PQ-kIU">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="or7-ee-Zcl">
+                            <connections>
+                                <segue destination="PPU-dk-yts" kind="show" id="Ohu-ZL-G1I"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="anq-TU-rJ2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -727,6 +733,7 @@
         <image name="Settings" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="Ohu-ZL-G1I"/>
         <segue reference="zck-D5-27A"/>
         <segue reference="d7R-4T-WIa"/>
         <segue reference="jCO-ed-QLw"/>
