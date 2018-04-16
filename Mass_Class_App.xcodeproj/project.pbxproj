@@ -17,7 +17,6 @@
 		D12965832079B9920005414B /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12965822079B9920005414B /* ResetPasswordViewController.swift */; };
 		D12965852079B9A30005414B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D12965842079B9A30005414B /* Main.storyboard */; };
 		D147D94F207A8F5A003D4FD4 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D147D94E207A8F5A003D4FD4 /* WelcomeViewController.swift */; };
-		D169A6D6208451E2002992AB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D169A6D5208451E1002992AB /* GoogleService-Info.plist */; };
 		D1838D092072D1E6005F5E71 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1838D082072D1E6005F5E71 /* AppDelegate.swift */; };
 		D1838D0B2072D1E6005F5E71 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1838D0A2072D1E6005F5E71 /* ViewController.swift */; };
 		D1838D112072D1E6005F5E71 /* Mass_Class_App.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D1838D0F2072D1E6005F5E71 /* Mass_Class_App.xcdatamodeld */; };
@@ -62,7 +61,6 @@
 		D12965822079B9920005414B /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		D12965842079B9A30005414B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		D147D94E207A8F5A003D4FD4 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
-		D169A6D5208451E1002992AB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D1838D052072D1E6005F5E71 /* Mass Class App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mass Class App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1838D082072D1E6005F5E71 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D1838D0A2072D1E6005F5E71 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -158,7 +156,6 @@
 				D1838D142072D1E6005F5E71 /* LaunchScreen.storyboard */,
 				D1838D172072D1E6005F5E71 /* Info.plist */,
 				6B1470D120843792001DA491 /* GoogleService-Info.plist */,
-				D169A6D5208451E1002992AB /* GoogleService-Info.plist */,
 				D1838D0F2072D1E6005F5E71 /* Mass_Class_App.xcdatamodeld */,
 			);
 			path = "Mass Class App";
@@ -316,7 +313,6 @@
 				D1DCC18C2083F13F00C55C44 /* Settings.bundle in Resources */,
 				D12965852079B9A30005414B /* Main.storyboard in Resources */,
 				6B1470D220843792001DA491 /* GoogleService-Info.plist in Resources */,
-				D169A6D6208451E2002992AB /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
