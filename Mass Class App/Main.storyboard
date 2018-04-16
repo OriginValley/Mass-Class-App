@@ -297,19 +297,21 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="News"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7or-cg-YGG">
-                                <rect key="frame" x="192" y="329" width="167" height="155"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7or-cg-YGG">
+                                <rect key="frame" x="191" y="329" width="168" height="147"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.60787553674762895" green="0.84115244289340096" blue="0.42477297954960408" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Maslow"/>
+                                <state key="normal" title="Maslow" image="ChartsIcon"/>
                                 <connections>
                                     <segue destination="UGu-Im-TsD" kind="show" id="KBq-LH-j63"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1pv-Dt-lgP">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1pv-Dt-lgP">
                                 <rect key="frame" x="16" y="329" width="167" height="155"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="SNCR"/>
+                                <state key="normal" title="                   " image="SNCRICON">
+                                    <color key="titleColor" red="0.0055718591370558235" green="0.0010434865356086808" blue="0.0014436421933306711" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pBX-h3-Olz">
                                 <rect key="frame" x="16" y="166" width="167" height="155"/>
@@ -688,8 +690,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="ChartsIcon" width="50" height="50"/>
         <image name="Image" width="7219" height="1017"/>
         <image name="MaslowTriangle" width="2000" height="1500"/>
+        <image name="SNCRICON" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="zck-D5-27A"/>
