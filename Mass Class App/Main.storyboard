@@ -336,10 +336,12 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="htw-k4-vsN">
                                 <rect key="frame" x="192" y="166" width="167" height="155"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Games"/>
-                                <connections>
-                                    <segue destination="rBV-7z-IXt" kind="show" id="KkX-jP-qtI"/>
-                                </connections>
+                                <color key="backgroundColor" red="1" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <inset key="titleEdgeInsets" minX="-57" minY="0.0" maxX="5" maxY="19"/>
+                                <inset key="imageEdgeInsets" minX="52" minY="0.0" maxX="0.0" maxY="54"/>
+                                <state key="normal" title="Games" image="GamesIcon">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
                             </button>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="smk-ga-Btz">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -403,7 +405,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="czL-5O-igl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5460" y="-440"/>
+            <point key="canvasLocation" x="5460" y="-707"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="V8g-eS-ehj">
