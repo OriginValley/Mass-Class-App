@@ -7,7 +7,8 @@
 
 import UIKit
 import Firebase
-import FirebaseAuth
+import FirebaseAuthUI
+
 
 
 class HomeViewController: UIViewController {
@@ -23,8 +24,17 @@ class HomeViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    @IBAction func logOutAction(sender: AnyObject) {
+    @IBAction func logOutButtonPressed(_ sender: UIButton) {
         
+        do {
+            try Auth.auth().signOut()
+            let authUI = FUIAuth.defaultAuthUI()
+            let authViewController = authUI!.authViewController()
+            self.present(authViewController, animated: true, completion: nil)
+
+        } catch  {
+            print("Problem signing out")
+        }
     }
+    
 }
