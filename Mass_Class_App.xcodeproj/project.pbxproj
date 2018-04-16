@@ -27,6 +27,7 @@
 		D1838D212072D1E6005F5E71 /* Mass_Class_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1838D202072D1E6005F5E71 /* Mass_Class_AppTests.swift */; };
 		D1838D2C2072D1E6005F5E71 /* Mass_Class_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1838D2B2072D1E6005F5E71 /* Mass_Class_AppUITests.swift */; };
 		D1DCC18C2083F13F00C55C44 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D1DCC18B2083F13F00C55C44 /* Settings.bundle */; };
+		D1DCC18E2084133400C55C44 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DCC18D2084133400C55C44 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +77,7 @@
 		D1838D2B2072D1E6005F5E71 /* Mass_Class_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mass_Class_AppUITests.swift; sourceTree = "<group>"; };
 		D1838D2D2072D1E6005F5E71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D1DCC18B2083F13F00C55C44 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		D1DCC18D2084133400C55C44 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		F2491139F46071B002A2D1CE /* Pods_Mass_Class_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mass_Class_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -149,6 +151,7 @@
 				D12965802079B98A0005414B /* LoginViewController.swift */,
 				D12965822079B9920005414B /* ResetPasswordViewController.swift */,
 				D1838D0A2072D1E6005F5E71 /* ViewController.swift */,
+				D1DCC18D2084133400C55C44 /* User.swift */,
 				D12965842079B9A30005414B /* Main.storyboard */,
 				D1DCC18B2083F13F00C55C44 /* Settings.bundle */,
 				D1838D122072D1E6005F5E71 /* Assets.xcassets */,
@@ -550,6 +553,7 @@
 				D1838D112072D1E6005F5E71 /* Mass_Class_App.xcdatamodeld in Sources */,
 				D1838D0B2072D1E6005F5E71 /* ViewController.swift in Sources */,
 				D1838D092072D1E6005F5E71 /* AppDelegate.swift in Sources */,
+				D1DCC18E2084133400C55C44 /* User.swift in Sources */,
 				D129657D2079B97B0005414B /* HomeViewController.swift in Sources */,
 				D129657F2079B9840005414B /* SignUpViewController.swift in Sources */,
 				D12965832079B9920005414B /* ResetPasswordViewController.swift in Sources */,
