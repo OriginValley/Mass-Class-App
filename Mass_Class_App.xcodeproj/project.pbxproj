@@ -15,6 +15,7 @@
 		D12965812079B98A0005414B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12965802079B98A0005414B /* LoginViewController.swift */; };
 		D12965832079B9920005414B /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12965822079B9920005414B /* ResetPasswordViewController.swift */; };
 		D12965852079B9A30005414B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D12965842079B9A30005414B /* Main.storyboard */; };
+		D1446E332084F93600426E53 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D1446E322084F93500426E53 /* GoogleService-Info.plist */; };
 		D147D94F207A8F5A003D4FD4 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D147D94E207A8F5A003D4FD4 /* WelcomeViewController.swift */; };
 		D1838D092072D1E6005F5E71 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1838D082072D1E6005F5E71 /* AppDelegate.swift */; };
 		D1838D0B2072D1E6005F5E71 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1838D0A2072D1E6005F5E71 /* ViewController.swift */; };
@@ -58,6 +59,7 @@
 		D12965802079B98A0005414B /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D12965822079B9920005414B /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		D12965842079B9A30005414B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		D1446E322084F93500426E53 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D147D94E207A8F5A003D4FD4 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		D1838D052072D1E6005F5E71 /* Mass Class App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mass Class App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1838D082072D1E6005F5E71 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 				D1838D122072D1E6005F5E71 /* Assets.xcassets */,
 				D1838D142072D1E6005F5E71 /* LaunchScreen.storyboard */,
 				D1838D172072D1E6005F5E71 /* Info.plist */,
+				D1446E322084F93500426E53 /* GoogleService-Info.plist */,
 				D1838D0F2072D1E6005F5E71 /* Mass_Class_App.xcdatamodeld */,
 			);
 			path = "Mass Class App";
@@ -306,6 +309,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D1838D162072D1E6005F5E71 /* LaunchScreen.storyboard in Resources */,
+				D1446E332084F93600426E53 /* GoogleService-Info.plist in Resources */,
 				D1838D132072D1E6005F5E71 /* Assets.xcassets in Resources */,
 				D1DCC18C2083F13F00C55C44 /* Settings.bundle in Resources */,
 				D12965852079B9A30005414B /* Main.storyboard in Resources */,
