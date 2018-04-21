@@ -24,6 +24,7 @@ class LoginViewController: UIViewController {
     //Login Action
     @IBAction func loginAction(_ sender: AnyObject) {
         
+        
         if self.emailTextField.text == "" || self.passwordTextField.text == "" {
             
             //Alert to tell the user that there was an error because they didn't fill anything in the textfields because they didn't fill anything in

@@ -17,6 +17,11 @@
 		6B0D3DDF20854C3D00AB3F1E /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0D3DDE20854C3D00AB3F1E /* UIViewExtension.swift */; };
 		6B16B1D520845F9E00A2DDC2 /* MCAAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B16B1D420845F9E00A2DDC2 /* MCAAuth.swift */; };
 		6B8DAA6B208AF8D400390154 /* MCALifeGraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8DAA6A208AF8D400390154 /* MCALifeGraphViewController.swift */; };
+		6B8DAA6D208BC91100390154 /* MCALifeGraphSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8DAA6C208BC91100390154 /* MCALifeGraphSelectionViewController.swift */; };
+		6B8DAA77208BCB0D00390154 /* SlideInPresentationAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8DAA74208BCB0B00390154 /* SlideInPresentationAnimator.swift */; };
+		6B8DAA78208BCB0D00390154 /* SlideInPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8DAA75208BCB0C00390154 /* SlideInPresentationController.swift */; };
+		6B8DAA79208BCB0D00390154 /* SlideInPresentationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8DAA76208BCB0D00390154 /* SlideInPresentationManager.swift */; };
+		6B8DAA7B208BCBDA00390154 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8DAA7A208BCBDA00390154 /* Constants.swift */; };
 		D129657D2079B97B0005414B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D129657C2079B97B0005414B /* HomeViewController.swift */; };
 		D129657F2079B9840005414B /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D129657E2079B9840005414B /* SignUpViewController.swift */; };
 		D12965812079B98A0005414B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12965802079B98A0005414B /* LoginViewController.swift */; };
@@ -64,6 +69,11 @@
 		6B0D3DDE20854C3D00AB3F1E /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		6B16B1D420845F9E00A2DDC2 /* MCAAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCAAuth.swift; sourceTree = "<group>"; };
 		6B8DAA6A208AF8D400390154 /* MCALifeGraphViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCALifeGraphViewController.swift; sourceTree = "<group>"; };
+		6B8DAA6C208BC91100390154 /* MCALifeGraphSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCALifeGraphSelectionViewController.swift; sourceTree = "<group>"; };
+		6B8DAA74208BCB0B00390154 /* SlideInPresentationAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideInPresentationAnimator.swift; sourceTree = "<group>"; };
+		6B8DAA75208BCB0C00390154 /* SlideInPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideInPresentationController.swift; sourceTree = "<group>"; };
+		6B8DAA76208BCB0D00390154 /* SlideInPresentationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideInPresentationManager.swift; sourceTree = "<group>"; };
+		6B8DAA7A208BCBDA00390154 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		6CC94D75F4C22DA50318F5FE /* Pods-Mass Class App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mass Class App.release.xcconfig"; path = "Pods/Target Support Files/Pods-Mass Class App/Pods-Mass Class App.release.xcconfig"; sourceTree = "<group>"; };
 		711035FC11D70F065543791C /* Pods_Mass_Class_AppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mass_Class_AppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9978E962F8A76DE4D04842B6 /* Pods_Mass_Class_AppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mass_Class_AppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -120,6 +130,60 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6B8DAA6E208BC9C700390154 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6B8DAA74208BCB0B00390154 /* SlideInPresentationAnimator.swift */,
+				6B8DAA75208BCB0C00390154 /* SlideInPresentationController.swift */,
+				6B8DAA76208BCB0D00390154 /* SlideInPresentationManager.swift */,
+				6B8DAA71208BC9F100390154 /* MCAAuthPickerView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		6B8DAA6F208BC9CC00390154 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		6B8DAA70208BC9D100390154 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				6B0D3DDE20854C3D00AB3F1E /* UIViewExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		6B8DAA71208BC9F100390154 /* MCAAuthPickerView */ = {
+			isa = PBXGroup;
+			children = (
+				6B0D3DC720853A8C00AB3F1E /* MCAAuthPickerView.xib */,
+				6B0D3DDC20854C0E00AB3F1E /* MCAAuthPickerView.swift */,
+			);
+			path = MCAAuthPickerView;
+			sourceTree = "<group>";
+		};
+		6B8DAA72208BCA0400390154 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				6B8DAA6A208AF8D400390154 /* MCALifeGraphViewController.swift */,
+				6B8DAA6C208BC91100390154 /* MCALifeGraphSelectionViewController.swift */,
+				6B16B1D420845F9E00A2DDC2 /* MCAAuth.swift */,
+				6B0D3DC4208467C100AB3F1E /* MCAAuthPickerViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		6B8DAA73208BCA2100390154 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				6B8DAA7A208BCBDA00390154 /* Constants.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		6D3E47A08F8D6021D3EB7AD1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -155,23 +219,22 @@
 		D1838D072072D1E6005F5E71 /* Mass Class App */ = {
 			isa = PBXGroup;
 			children = (
+				6B8DAA73208BCA2100390154 /* Utilities */,
+				6B8DAA72208BCA0400390154 /* ViewControllers */,
+				6B8DAA70208BC9D100390154 /* Extensions */,
+				6B8DAA6F208BC9CC00390154 /* Protocols */,
+				6B8DAA6E208BC9C700390154 /* Views */,
 				6B0D3DDB2085490700AB3F1E /* Mass Class App.entitlements */,
 				6B0D3DC1208460ED00AB3F1E /* GoogleService-Info.plist */,
 				D1838D082072D1E6005F5E71 /* AppDelegate.swift */,
 				D147D94E207A8F5A003D4FD4 /* WelcomeViewController.swift */,
-				6B0D3DC4208467C100AB3F1E /* MCAAuthPickerViewController.swift */,
 				D129657E2079B9840005414B /* SignUpViewController.swift */,
 				D129657C2079B97B0005414B /* HomeViewController.swift */,
-				6B16B1D420845F9E00A2DDC2 /* MCAAuth.swift */,
 				D12965802079B98A0005414B /* LoginViewController.swift */,
 				D12965822079B9920005414B /* ResetPasswordViewController.swift */,
 				D1838D0A2072D1E6005F5E71 /* ViewController.swift */,
 				D1DCC18D2084133400C55C44 /* User.swift */,
 				D12965842079B9A30005414B /* Main.storyboard */,
-				6B8DAA6A208AF8D400390154 /* MCALifeGraphViewController.swift */,
-				6B0D3DC720853A8C00AB3F1E /* MCAAuthPickerView.xib */,
-				6B0D3DDC20854C0E00AB3F1E /* MCAAuthPickerView.swift */,
-				6B0D3DDE20854C3D00AB3F1E /* UIViewExtension.swift */,
 				D1DCC18B2083F13F00C55C44 /* Settings.bundle */,
 				D1838D122072D1E6005F5E71 /* Assets.xcassets */,
 				D1838D142072D1E6005F5E71 /* LaunchScreen.storyboard */,
@@ -571,18 +634,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				D12965812079B98A0005414B /* LoginViewController.swift in Sources */,
+				6B8DAA7B208BCBDA00390154 /* Constants.swift in Sources */,
+				6B8DAA77208BCB0D00390154 /* SlideInPresentationAnimator.swift in Sources */,
 				6B0D3DC5208467C100AB3F1E /* MCAAuthPickerViewController.swift in Sources */,
 				D147D94F207A8F5A003D4FD4 /* WelcomeViewController.swift in Sources */,
 				D1838D112072D1E6005F5E71 /* Mass_Class_App.xcdatamodeld in Sources */,
 				6B8DAA6B208AF8D400390154 /* MCALifeGraphViewController.swift in Sources */,
+				6B8DAA78208BCB0D00390154 /* SlideInPresentationController.swift in Sources */,
 				D1838D0B2072D1E6005F5E71 /* ViewController.swift in Sources */,
 				D1838D092072D1E6005F5E71 /* AppDelegate.swift in Sources */,
 				D1DCC18E2084133400C55C44 /* User.swift in Sources */,
+				6B8DAA79208BCB0D00390154 /* SlideInPresentationManager.swift in Sources */,
 				D129657D2079B97B0005414B /* HomeViewController.swift in Sources */,
 				D129657F2079B9840005414B /* SignUpViewController.swift in Sources */,
 				6B0D3DDF20854C3D00AB3F1E /* UIViewExtension.swift in Sources */,
 				D12965832079B9920005414B /* ResetPasswordViewController.swift in Sources */,
 				6B0D3DDD20854C0E00AB3F1E /* MCAAuthPickerView.swift in Sources */,
+				6B8DAA6D208BC91100390154 /* MCALifeGraphSelectionViewController.swift in Sources */,
 				6B16B1D520845F9E00A2DDC2 /* MCAAuth.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
