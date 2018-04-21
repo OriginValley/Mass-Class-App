@@ -1,0 +1,107 @@
+//
+//  MCALifeGraphIconBaseView.swift
+//  Mass Class App
+//
+//  Created by Christian Flanders on 4/21/18.
+//  Copyright © 2018 Origin Valley. All rights reserved.
+//
+
+import UIKit
+
+class MCALifeGraphIconBaseView: UIView {
+
+    var contentView: UIView!
+    var scrollView: UIScrollView!
+    
+    var contentOffset: CGFloat = 20
+
+    
+    fileprivate func setRandomBackgroundColor() {
+        let randomOne = CGFloat(arc4random_uniform(UInt32(255)))
+        let randomTwo = CGFloat(arc4random_uniform(UInt32(255)))
+        let randomThree = CGFloat(arc4random_uniform(UInt32(255)))
+        let randomColor = UIColor.init(red: randomOne / 255,  green: randomTwo / 255, blue: randomThree / 255 , alpha: 1)
+
+        self.backgroundColor = randomColor
+    }
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        setUpGestures()
+        
+        setRandomBackgroundColor()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        setUpGestures()
+        
+        setRandomBackgroundColor()
+    }
+    
+    private func setUpGestures() {
+        let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(dealWithPan(_:)))
+        self.addGestureRecognizer(panGestureRecognizer)
+        let pinchGestureRecognizer = UIPinchGestureRecognizer(target: self, action: #selector(dealWithPinch(_:)))
+        self.addGestureRecognizer(pinchGestureRecognizer)
+
+        
+    }
+    
+    var shouldDrawShadow = false {
+        willSet {
+            if newValue && shouldDrawShadow == true {
+                return
+            } else if newValue && !shouldDrawShadow {
+                drawShadow()
+            } else if !newValue {
+                removeShadow()
+            }
+        }
+    }
+    
+    @objc func dealWithPan(_ panGesture: UIPanGestureRecognizer) {
+       shouldDrawShadow = true
+        contentView.bringSubview(toFront: self)
+        let location = panGesture.location(in: contentView)
+        print("pan gesture location = \(location)")
+        
+        if panGesture.state == .ended {
+            shouldDrawShadow = false
+        }
+        
+        
+        let viewGoingOutOfContentView = self.frame.maxX <= contentView.frame.maxX
+        
+        // If the user tries to drag the view past the right edge of the canvas
+        
+        if self.frame.maxX >= contentView.frame.maxX - 20 && panGesture.translation(in: contentView).x > 0   {
+            print("OVER")
+            UIView.animate(withDuration: 0.25, delay: 0, usingSpringWithDamping: 0.3, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
+               self.center.x = self.contentView.frame.maxX - (self.frame.width / 2 ) - 20
+            }) { (finished) in
+                
+            }
+            return
+
+        }
+        
+        self.center.x = panGesture.location(in: contentView).x
+        self.center.y =  panGesture.location(in: contentView).y
+        if panGesture.location(in: self).x > self.frame.size.width - 50   {
+            scrollView.setContentOffset(CGPoint(x: scrollView.contentOffset.x + contentOffset, y: 0), animated: true)
+            contentOffset += 1
+        }
+        
+        
+    }
+    
+    @objc func dealWithPinch(_ sender: UIPinchGestureRecognizer) {
+        contentView.bringSubview(toFront: self)
+        print(sender.scale)
+        self.center = sender.location(in: contentView)
+        self.frame.size = CGSize(width: self.frame.size.width * sender.scale, height: self.frame.size.width * sender.scale)
+        sender.scale = 1
+    }
+    
+}

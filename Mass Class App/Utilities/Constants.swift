@@ -20,4 +20,6 @@ class Constants {
     // MARK: Theme
     static let buttonCornerRadius: CGFloat = 8
     
+    
+    static let graphIconDefaultSize = CGSize(width: 100, height: 100)
 }

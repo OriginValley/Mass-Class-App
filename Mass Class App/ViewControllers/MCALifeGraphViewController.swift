@@ -21,10 +21,10 @@ class MCALifeGraphViewController: UIViewController, UITextViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(dealWithPan(_:)))
-        testTextView.addGestureRecognizer(panGestureRecognizer)
-        let pinchGestureRecognizer = UIPinchGestureRecognizer(target: self, action: #selector(dealWithPinch(_:)))
-        testTextView.addGestureRecognizer(pinchGestureRecognizer)
+//        let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(dealWithPan(_:)))
+//        testTextView.addGestureRecognizer(panGestureRecognizer)
+//        let pinchGestureRecognizer = UIPinchGestureRecognizer(target: self, action: #selector(dealWithPinch(_:)))
+//        testTextView.addGestureRecognizer(pinchGestureRecognizer)
         
         let imageView = UIImageView(frame: contentView.frame)
         imageView.image = #imageLiteral(resourceName: "dots-polka-white-spots-blue-1920x1080-c2-ffffff-40e0d0-l2-15-34-a-315-f-3")
@@ -37,16 +37,17 @@ class MCALifeGraphViewController: UIViewController, UITextViewDelegate {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         
-        guard let frameToSet = UserDefaults.standard.data(forKey: "frame") else { return }
-        guard let decoded = try? JSONDecoder().decode(CGRect.self, from: frameToSet) else { return }
-        testTextView.frame = decoded
+//        guard let frameToSet = UserDefaults.standard.data(forKey: "frame") else { return }
+//        guard let decoded = try? JSONDecoder().decode(CGRect.self, from: frameToSet) else { return }
+//        testTextView.frame = decoded
 
         
     }
     var contentOffset: CGFloat = 20
     
     @IBAction func saveButtonPressed(_ sender: UIBarButtonItem) {
-        performSegue(withIdentifier: Constants.graphActionSequeIdentifier, sender: self)
+//        performSegue(withIdentifier: Constants.graphActionSequeIdentifier, sender: self)
+        addNewGenericIcon()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -55,32 +56,18 @@ class MCALifeGraphViewController: UIViewController, UITextViewDelegate {
             controller.modalPresentationStyle = .custom
         }
     }
-    @objc func dealWithPan(_ panGesture: UIPanGestureRecognizer) {
-        if !(testTextView.frame.maxX < contentView.frame.maxX) {
-            if panGesture.translation(in: contentView).x > 0 {
-                return
-            }
-        }
-        print("test is \(testTextView.frame.maxX)")
-        print("view is \(contentView.frame.maxX)")
-        let translation = panGesture.translation(in: self.view)
-        testTextView.center.x = panGesture.location(in: contentView).x
-        testTextView.center.y =  panGesture.location(in: contentView).y
-        if panGesture.location(in: self.view).x > self.view.frame.size.width - 50   {
-            scrollView.setContentOffset(CGPoint(x: scrollView.contentOffset.x + contentOffset, y: 0), animated: true)
-            contentOffset += 1
-        }
-        
-        
-    }
-
-    @objc func dealWithPinch(_ sender: UIPinchGestureRecognizer) {
-        print(sender.scale)
-        testTextView.center = sender.location(in: contentView)
-        testTextView.frame.size = CGSize(width: testTextView.frame.size.width * sender.scale, height: testTextView.frame.size.width * sender.scale)
-        sender.scale = 1
-    }
     
+
+    
+    func addNewGenericIcon() {
+        let newIconOrigin = CGPoint(x: 300, y: 300)
+        let newIconFrame = CGRect(origin: newIconOrigin, size: Constants.graphIconDefaultSize)
+        let newIcon = MCALifeGraphIconBaseView(frame: newIconFrame)
+        newIcon.contentView = contentView
+        newIcon.scrollView = scrollView
+        contentView.addSubview(newIcon)
+        contentView.bringSubview(toFront: newIcon)
+    }
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
         if text == "\n" {
             textView.resignFirstResponder()

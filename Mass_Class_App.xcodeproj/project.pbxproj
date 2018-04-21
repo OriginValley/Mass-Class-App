@@ -22,6 +22,7 @@
 		6B8DAA78208BCB0D00390154 /* SlideInPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8DAA75208BCB0C00390154 /* SlideInPresentationController.swift */; };
 		6B8DAA79208BCB0D00390154 /* SlideInPresentationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8DAA76208BCB0D00390154 /* SlideInPresentationManager.swift */; };
 		6B8DAA7B208BCBDA00390154 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8DAA7A208BCBDA00390154 /* Constants.swift */; };
+		6B8DAA7D208BE55700390154 /* MCALifeGraphIconBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8DAA7C208BE55700390154 /* MCALifeGraphIconBaseView.swift */; };
 		D129657D2079B97B0005414B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D129657C2079B97B0005414B /* HomeViewController.swift */; };
 		D129657F2079B9840005414B /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D129657E2079B9840005414B /* SignUpViewController.swift */; };
 		D12965812079B98A0005414B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12965802079B98A0005414B /* LoginViewController.swift */; };
@@ -74,6 +75,7 @@
 		6B8DAA75208BCB0C00390154 /* SlideInPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideInPresentationController.swift; sourceTree = "<group>"; };
 		6B8DAA76208BCB0D00390154 /* SlideInPresentationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideInPresentationManager.swift; sourceTree = "<group>"; };
 		6B8DAA7A208BCBDA00390154 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		6B8DAA7C208BE55700390154 /* MCALifeGraphIconBaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCALifeGraphIconBaseView.swift; sourceTree = "<group>"; };
 		6CC94D75F4C22DA50318F5FE /* Pods-Mass Class App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mass Class App.release.xcconfig"; path = "Pods/Target Support Files/Pods-Mass Class App/Pods-Mass Class App.release.xcconfig"; sourceTree = "<group>"; };
 		711035FC11D70F065543791C /* Pods_Mass_Class_AppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mass_Class_AppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9978E962F8A76DE4D04842B6 /* Pods_Mass_Class_AppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mass_Class_AppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -137,6 +139,7 @@
 				6B8DAA75208BCB0C00390154 /* SlideInPresentationController.swift */,
 				6B8DAA76208BCB0D00390154 /* SlideInPresentationManager.swift */,
 				6B8DAA71208BC9F100390154 /* MCAAuthPickerView */,
+				6B8DAA7C208BE55700390154 /* MCALifeGraphIconBaseView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -648,6 +651,7 @@
 				D129657D2079B97B0005414B /* HomeViewController.swift in Sources */,
 				D129657F2079B9840005414B /* SignUpViewController.swift in Sources */,
 				6B0D3DDF20854C3D00AB3F1E /* UIViewExtension.swift in Sources */,
+				6B8DAA7D208BE55700390154 /* MCALifeGraphIconBaseView.swift in Sources */,
 				D12965832079B9920005414B /* ResetPasswordViewController.swift in Sources */,
 				6B0D3DDD20854C0E00AB3F1E /* MCAAuthPickerView.swift in Sources */,
 				6B8DAA6D208BC91100390154 /* MCALifeGraphSelectionViewController.swift in Sources */,
