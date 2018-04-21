@@ -16,6 +16,7 @@
 		6B0D3DDD20854C0E00AB3F1E /* MCAAuthPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0D3DDC20854C0E00AB3F1E /* MCAAuthPickerView.swift */; };
 		6B0D3DDF20854C3D00AB3F1E /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0D3DDE20854C3D00AB3F1E /* UIViewExtension.swift */; };
 		6B16B1D520845F9E00A2DDC2 /* MCAAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B16B1D420845F9E00A2DDC2 /* MCAAuth.swift */; };
+		6B8DAA6B208AF8D400390154 /* MCALifeGraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8DAA6A208AF8D400390154 /* MCALifeGraphViewController.swift */; };
 		D129657D2079B97B0005414B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D129657C2079B97B0005414B /* HomeViewController.swift */; };
 		D129657F2079B9840005414B /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D129657E2079B9840005414B /* SignUpViewController.swift */; };
 		D12965812079B98A0005414B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12965802079B98A0005414B /* LoginViewController.swift */; };
@@ -62,6 +63,7 @@
 		6B0D3DDC20854C0E00AB3F1E /* MCAAuthPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCAAuthPickerView.swift; sourceTree = "<group>"; };
 		6B0D3DDE20854C3D00AB3F1E /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		6B16B1D420845F9E00A2DDC2 /* MCAAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCAAuth.swift; sourceTree = "<group>"; };
+		6B8DAA6A208AF8D400390154 /* MCALifeGraphViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCALifeGraphViewController.swift; sourceTree = "<group>"; };
 		6CC94D75F4C22DA50318F5FE /* Pods-Mass Class App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mass Class App.release.xcconfig"; path = "Pods/Target Support Files/Pods-Mass Class App/Pods-Mass Class App.release.xcconfig"; sourceTree = "<group>"; };
 		711035FC11D70F065543791C /* Pods_Mass_Class_AppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mass_Class_AppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9978E962F8A76DE4D04842B6 /* Pods_Mass_Class_AppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mass_Class_AppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -166,6 +168,7 @@
 				D1838D0A2072D1E6005F5E71 /* ViewController.swift */,
 				D1DCC18D2084133400C55C44 /* User.swift */,
 				D12965842079B9A30005414B /* Main.storyboard */,
+				6B8DAA6A208AF8D400390154 /* MCALifeGraphViewController.swift */,
 				6B0D3DC720853A8C00AB3F1E /* MCAAuthPickerView.xib */,
 				6B0D3DDC20854C0E00AB3F1E /* MCAAuthPickerView.swift */,
 				6B0D3DDE20854C3D00AB3F1E /* UIViewExtension.swift */,
@@ -571,6 +574,7 @@
 				6B0D3DC5208467C100AB3F1E /* MCAAuthPickerViewController.swift in Sources */,
 				D147D94F207A8F5A003D4FD4 /* WelcomeViewController.swift in Sources */,
 				D1838D112072D1E6005F5E71 /* Mass_Class_App.xcdatamodeld in Sources */,
+				6B8DAA6B208AF8D400390154 /* MCALifeGraphViewController.swift in Sources */,
 				D1838D0B2072D1E6005F5E71 /* ViewController.swift in Sources */,
 				D1838D092072D1E6005F5E71 /* AppDelegate.swift in Sources */,
 				D1DCC18E2084133400C55C44 /* User.swift in Sources */,
