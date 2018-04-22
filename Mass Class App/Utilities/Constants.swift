@@ -14,7 +14,7 @@ class Constants {
     
     // MARK: Segues
     static let graphActionSequeIdentifier = "GraphActionSegue"
-    
+    static let returnToGraphIdentifier = "UnwindToGraph"
     
     
     // MARK: Theme

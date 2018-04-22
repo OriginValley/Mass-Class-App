@@ -46,8 +46,10 @@ class MCALifeGraphViewController: UIViewController, UITextViewDelegate {
     var contentOffset: CGFloat = 20
     
     @IBAction func saveButtonPressed(_ sender: UIBarButtonItem) {
-//        performSegue(withIdentifier: Constants.graphActionSequeIdentifier, sender: self)
-        addNewGenericIcon()
+        performSegue(withIdentifier: Constants.graphActionSequeIdentifier, sender: self)
+//        addNewGenericIcon()
+//        findOpenSpaceForNewView()
+//        addNewGenericIcon()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -58,16 +60,78 @@ class MCALifeGraphViewController: UIViewController, UITextViewDelegate {
     }
     
 
-    
-    func addNewGenericIcon() {
+    func findOpenSpaceForNewView() {
+        let newIconSize = Constants.graphIconDefaultSize
         let newIconOrigin = CGPoint(x: 300, y: 300)
         let newIconFrame = CGRect(origin: newIconOrigin, size: Constants.graphIconDefaultSize)
         let newIcon = MCALifeGraphIconBaseView(frame: newIconFrame)
         newIcon.contentView = contentView
         newIcon.scrollView = scrollView
+        for views in contentView.subviews {
+            if newIcon.frame.intersects(views.frame) {
+            }
+            
+        }
+    }
+    
+    func addNewGenericIcon() {
+        let newIconOrigin = CGPoint(x: scrollView.frame.midX, y: scrollView.frame.midY)
+        let newIconFrame = CGRect(origin: newIconOrigin, size: Constants.graphIconDefaultSize)
+        let newIcon = MCALifeGraphIconBaseView(frame: newIconFrame)
+        newIcon.contentView = contentView
+        newIcon.scrollView = scrollView
+        checkViewForCollisions(view: newIcon)
         contentView.addSubview(newIcon)
         contentView.bringSubview(toFront: newIcon)
     }
+    
+    func addNoteIcon() {
+        let newIconOrigin = CGPoint(x: scrollView.frame.midX, y: scrollView.frame.midY)
+        let newIconFrame = CGRect(origin: newIconOrigin, size: Constants.graphIconDefaultSize)
+        let newIcon = MCALifeGraphIconNoteView(frame: newIconFrame)
+        newIcon.contentView = contentView
+        newIcon.scrollView = scrollView
+        checkViewForCollisions(view: newIcon)
+        contentView.addSubview(newIcon)
+        contentView.bringSubview(toFront: newIcon)
+    }
+    
+    func addImageIcon(image: UIImage) {
+        let newIconOrigin = CGPoint(x: scrollView.frame.midX, y: scrollView.frame.midY)
+        let newIconFrame = CGRect(origin: newIconOrigin, size: Constants.graphIconDefaultSize)
+        let newIcon = MCALifeImageIconView(frame: newIconFrame, image: image)
+        newIcon.contentView = contentView
+        newIcon.scrollView = scrollView
+        checkViewForCollisions(view: newIcon)
+        contentView.addSubview(newIcon)
+        contentView.bringSubview(toFront: newIcon)
+
+    }
+    
+    @IBAction func unwindToGraph(segue:UIStoryboardSegue) {
+        
+        
+    }
+
+    // TODO: This is bad and you should feel bad. The locations will eventually run out, and the scrolling should have the view in the center
+    private func checkViewForCollisions(view: UIView) {
+        for views in contentView.subviews {
+            if views .isKind(of: MCALifeGraphIconBaseView.self) {
+                if view.frame.intersects(views.frame) {
+                    print("YES")
+//                    view.backgroundColor = UIColor.white
+                    view.center.x +=  110
+//                    view.center.y += 100
+//                    var frameToScroll = view.frame
+//                    frameToScroll.origin = self.view.center
+                    scrollView.scrollRectToVisible(view.frame, animated: true)
+                    checkViewForCollisions(view: view)
+                }
+                
+            }
+        }
+    }
+    
     func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
         if text == "\n" {
             textView.resignFirstResponder()
