@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Firebase
+import CodableFirebase
 
 class MCALifeGraphViewController: UIViewController, UITextViewDelegate {
 
@@ -21,11 +23,6 @@ class MCALifeGraphViewController: UIViewController, UITextViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(dealWithPan(_:)))
-//        testTextView.addGestureRecognizer(panGestureRecognizer)
-//        let pinchGestureRecognizer = UIPinchGestureRecognizer(target: self, action: #selector(dealWithPinch(_:)))
-//        testTextView.addGestureRecognizer(pinchGestureRecognizer)
-        
         let imageView = UIImageView(frame: contentView.frame)
         imageView.image = #imageLiteral(resourceName: "dots-polka-white-spots-blue-1920x1080-c2-ffffff-40e0d0-l2-15-34-a-315-f-3")
         contentView.addSubview(imageView)
@@ -36,13 +33,8 @@ class MCALifeGraphViewController: UIViewController, UITextViewDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        
-//        guard let frameToSet = UserDefaults.standard.data(forKey: "frame") else { return }
-//        guard let decoded = try? JSONDecoder().decode(CGRect.self, from: frameToSet) else { return }
-//        testTextView.frame = decoded
-
-        
     }
+    
     var contentOffset: CGFloat = 20
     
     @IBAction func saveButtonPressed(_ sender: UIBarButtonItem) {
@@ -132,24 +124,63 @@ class MCALifeGraphViewController: UIViewController, UITextViewDelegate {
         }
     }
     
-    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
-        if text == "\n" {
-            textView.resignFirstResponder()
-            return false
-        }
-        return true
-    }
 
     
-    func saveLocation() {
-        guard let encoder = try? JSONEncoder().encode(testTextView.frame) else { return }
-        let defaults  = UserDefaults.standard
-        defaults.set(encoder, forKey: "frame")
+    // TODO: I don't love this function...nnot sure why. Look at later
+    
+    func convertIconsToJSON() -> MCAlifeGraphContentsCodable? {
+        var childIcons = [MCALifeGraphIconBaseViewCodable]()
+        var childNoteIcons = [MCALifeGraphIconNoteViewCodable]()
+        var childIconImages = [MCALifeImageIconViewCodable]()
         
-        if let string = String(data: encoder, encoding: .utf8 ) {
-            print(string)
+        for view in contentView.subviews {
+            //This is a bad way to do this. It works, but we have to check for subclasses first since they all inherit from the same base class.
+            if view.isKind(of: MCALifeGraphIconNoteView.self) {
+                let newNoteCodable = MCALifeGraphIconNoteViewCodable(frame: view.frame,
+                                                                     identifier: "identifier",
+                                                                     bgColor: MCAColor(red: 1, blue: 1, green: 1, alpha: 1),
+                                                                     noteContents: "blah blah blah blah")
+                childNoteIcons.append(newNoteCodable)
+            } else if view.isKind(of: MCALifeImageIconView.self) {
+                let newImageCodable = MCALifeImageIconViewCodable(frame: view.frame,
+                                                                  identifier: "identifier",
+                                                                  bgColor: MCAColor(red: 1, blue: 1, green: 1, alpha: 1),
+                                                                  imageLocation: "none yet")
+                childIconImages.append(newImageCodable)
+            } else if view.isKind(of: MCALifeGraphIconBaseView.self) {
+                let newIconCodable = MCALifeGraphIconBaseViewCodable(frame: view.frame,
+                                                                     identifier: "identifier",
+                                                                     bgColor: MCAColor(red: 1, blue: 1, green: 1, alpha: 1))
+                childIcons.append(newIconCodable)
+                
+            }
+            
         }
-}
+        
+        let newLifeGraphCodable = MCAlifeGraphContentsCodable(graphIdentifier: "My Graph",
+                                                              graphBackgroundColor: MCAColor(red: 1, blue: 1, green: 1, alpha: 1),
+                                                              childIcons: childIcons,
+                                                              childNoteIcons: childNoteIcons,
+                                                              childImageIcons: childIconImages)
+        return newLifeGraphCodable
+//        let jsonEncoder = JSONEncoder()
+//        let graphJSONData = try! jsonEncoder.encode(newLifeGraphCodable)
+//        return graphJSONData
+    }
 
+    func uploadToFirebase() {
+        guard let graphJSONData = convertIconsToJSON() else { return }
+        let firData = try! FirebaseEncoder().encode(graphJSONData)
+        var ref = Database.database().reference()
+        guard let userIdentifier = Auth.auth().currentUser?.uid else {
+            print("not logged in!")
+            return
+        }
+        ref.child(userIdentifier).child("my first graph").setValue(firData)
+        
+//        self.ref = Database.database().reference()
+//        guard let uid = Auth.auth().currentUser?.uid else { return }
+//        self.ref.child(uid).child("Query Heart Rate Data").childByAutoId().setValue(hrData)
 
+    }
 }

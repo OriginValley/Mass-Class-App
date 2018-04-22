@@ -16,6 +16,7 @@ pod 'FacebookCore'
 pod 'FacebookLogin'
 pod 'FacebookShare'
 pod 'TwitterKit'
+pod 'CodableFirebase'
 
   target 'Mass Class AppTests' do
     inherit! :search_paths

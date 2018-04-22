@@ -11,6 +11,7 @@ PODS:
   - BoringSSL/Implementation (10.0):
     - BoringSSL/Interface (= 10.0)
   - BoringSSL/Interface (10.0)
+  - CodableFirebase (0.0.7)
   - FacebookCore (0.3.0):
     - Bolts (~> 1.8)
     - FBSDKCoreKit (~> 4.27)
@@ -159,6 +160,7 @@ PODS:
     - TwitterCore (>= 3.1.0)
 
 DEPENDENCIES:
+  - CodableFirebase
   - FacebookCore
   - FacebookLogin
   - FacebookShare
@@ -172,6 +174,7 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
   BoringSSL: 32764dbaf5f5888cf51fbaa172a010126b41bcd4
+  CodableFirebase: 090c5b4c9ad67c9f4fddc3b00d168ec38cad3b14
   FacebookCore: 3ffa190a3f1f96cec0e44d3fc221bc322c595ffa
   FacebookLogin: 0af839ea858faef99550d16596b87b4a8e8906e6
   FacebookShare: 0469964297ebd75f052be2c5083389a4208e82b7
@@ -202,6 +205,6 @@ SPEC CHECKSUMS:
   TwitterCore: 644d59e75abccb26cf0a9050d2c4dea0e5412241
   TwitterKit: a2e60ddcedbf54091eac6f27685ca7a87681e1d7
 
-PODFILE CHECKSUM: af636e604e52c4988f12d93e1d4a45e15572a520
+PODFILE CHECKSUM: 99c04585d0d95d6ef7212001bd52bdf76be95d40
 
 COCOAPODS: 1.4.0

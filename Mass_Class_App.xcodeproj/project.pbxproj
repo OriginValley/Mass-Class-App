@@ -16,6 +16,7 @@
 		6B0D3DDD20854C0E00AB3F1E /* MCAAuthPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0D3DDC20854C0E00AB3F1E /* MCAAuthPickerView.swift */; };
 		6B0D3DDF20854C3D00AB3F1E /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0D3DDE20854C3D00AB3F1E /* UIViewExtension.swift */; };
 		6B16B1D520845F9E00A2DDC2 /* MCAAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B16B1D420845F9E00A2DDC2 /* MCAAuth.swift */; };
+		6B2EFEF4208D26CD006998B7 /* MCALifeGraphIconCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2EFEF3208D26CD006998B7 /* MCALifeGraphIconCodable.swift */; };
 		6B8DAA6B208AF8D400390154 /* MCALifeGraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8DAA6A208AF8D400390154 /* MCALifeGraphViewController.swift */; };
 		6B8DAA6D208BC91100390154 /* MCALifeGraphSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8DAA6C208BC91100390154 /* MCALifeGraphSelectionViewController.swift */; };
 		6B8DAA77208BCB0D00390154 /* SlideInPresentationAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8DAA74208BCB0B00390154 /* SlideInPresentationAnimator.swift */; };
@@ -71,6 +72,7 @@
 		6B0D3DDC20854C0E00AB3F1E /* MCAAuthPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCAAuthPickerView.swift; sourceTree = "<group>"; };
 		6B0D3DDE20854C3D00AB3F1E /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		6B16B1D420845F9E00A2DDC2 /* MCAAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCAAuth.swift; sourceTree = "<group>"; };
+		6B2EFEF3208D26CD006998B7 /* MCALifeGraphIconCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCALifeGraphIconCodable.swift; sourceTree = "<group>"; };
 		6B8DAA6A208AF8D400390154 /* MCALifeGraphViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCALifeGraphViewController.swift; sourceTree = "<group>"; };
 		6B8DAA6C208BC91100390154 /* MCALifeGraphSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCALifeGraphSelectionViewController.swift; sourceTree = "<group>"; };
 		6B8DAA74208BCB0B00390154 /* SlideInPresentationAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideInPresentationAnimator.swift; sourceTree = "<group>"; };
@@ -136,16 +138,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		6B8DAA6E208BC9C700390154 /* Views */ = {
+		6B2EFEF0208D23BA006998B7 /* MCALifeGraphIcons */ = {
+			isa = PBXGroup;
+			children = (
+				6B8DAA7C208BE55700390154 /* MCALifeGraphIconBaseView.swift */,
+				6B8DAA7E208C0CBB00390154 /* MCALifeGraphIconNoteView.swift */,
+				6B8DAA80208C166100390154 /* MCALifeImageIconView.swift */,
+				6B2EFEF3208D26CD006998B7 /* MCALifeGraphIconCodable.swift */,
+			);
+			path = MCALifeGraphIcons;
+			sourceTree = "<group>";
+		};
+		6B2EFEF1208D23CE006998B7 /* Presentation Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				6B2EFEF2208D23DE006998B7 /* SlideInPresentationController */,
+			);
+			path = "Presentation Controllers";
+			sourceTree = "<group>";
+		};
+		6B2EFEF2208D23DE006998B7 /* SlideInPresentationController */ = {
 			isa = PBXGroup;
 			children = (
 				6B8DAA74208BCB0B00390154 /* SlideInPresentationAnimator.swift */,
 				6B8DAA75208BCB0C00390154 /* SlideInPresentationController.swift */,
 				6B8DAA76208BCB0D00390154 /* SlideInPresentationManager.swift */,
+			);
+			path = SlideInPresentationController;
+			sourceTree = "<group>";
+		};
+		6B8DAA6E208BC9C700390154 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6B2EFEF0208D23BA006998B7 /* MCALifeGraphIcons */,
 				6B8DAA71208BC9F100390154 /* MCAAuthPickerView */,
-				6B8DAA7C208BE55700390154 /* MCALifeGraphIconBaseView.swift */,
-				6B8DAA7E208C0CBB00390154 /* MCALifeGraphIconNoteView.swift */,
-				6B8DAA80208C166100390154 /* MCALifeImageIconView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -228,6 +254,7 @@
 		D1838D072072D1E6005F5E71 /* Mass Class App */ = {
 			isa = PBXGroup;
 			children = (
+				6B2EFEF1208D23CE006998B7 /* Presentation Controllers */,
 				6B8DAA73208BCA2100390154 /* Utilities */,
 				6B8DAA72208BCA0400390154 /* ViewControllers */,
 				6B8DAA70208BC9D100390154 /* Extensions */,
@@ -554,6 +581,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-Mass Class App/Pods-Mass Class App-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
 				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
+				"${BUILT_PRODUCTS_DIR}/CodableFirebase/CodableFirebase.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKShareKit/FBSDKShareKit.framework",
@@ -578,6 +606,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CodableFirebase.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKShareKit.framework",
@@ -654,6 +683,7 @@
 				D1838D0B2072D1E6005F5E71 /* ViewController.swift in Sources */,
 				D1838D092072D1E6005F5E71 /* AppDelegate.swift in Sources */,
 				D1DCC18E2084133400C55C44 /* User.swift in Sources */,
+				6B2EFEF4208D26CD006998B7 /* MCALifeGraphIconCodable.swift in Sources */,
 				6B8DAA79208BCB0D00390154 /* SlideInPresentationManager.swift in Sources */,
 				D129657D2079B97B0005414B /* HomeViewController.swift in Sources */,
 				D129657F2079B9840005414B /* SignUpViewController.swift in Sources */,
