@@ -83,8 +83,44 @@ class MCALifeGraphIconBaseView: UIView {
                 
             }
             return
-
         }
+        
+        // If the user tries to drag the view past the left edge of the canvas
+        if self.frame.minX <= contentView.frame.minY + 20 && panGesture.translation(in: contentView).x < 0 {
+            UIView.animate(withDuration: 0.25, delay: 0, usingSpringWithDamping: 0.3, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
+                self.center.x = self.contentView.frame.minX + (self.frame.width / 2 ) + 20
+            }) { (finished) in
+                
+            }
+            return
+        }
+        
+        // If the user tries to drag the view past the top edge of the canvas
+        print(self.frame.minY)
+        print(contentView.frame.minY)
+        
+        if panGesture.location(in: contentView).y < 20 {
+            print("ayyy")
+            UIView.animate(withDuration: 0.25, delay: 0, usingSpringWithDamping: 0.3, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
+                self.center.y = self.contentView.frame.minY + (self.frame.height / 2 ) + 20
+            }) { (finished) in
+                
+            }
+            return
+        }
+        
+        // Check if the user is trying to drag the view past the bottom edge of the canvas
+        
+        if panGesture.location(in: contentView).y > contentView.frame.maxY - 20 {
+            print("ayyy")
+            UIView.animate(withDuration: 0.25, delay: 0, usingSpringWithDamping: 0.3, initialSpringVelocity: 0, options: .curveEaseInOut, animations: {
+                self.center.y = self.contentView.frame.maxY - (self.frame.height / 2 ) - 20
+            }) { (finished) in
+                
+            }
+            return
+        }
+
         
         self.center.x = panGesture.location(in: contentView).x
         self.center.y =  panGesture.location(in: contentView).y
