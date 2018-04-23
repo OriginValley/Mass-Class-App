@@ -21,6 +21,8 @@ class MCALifeGraphViewController: UIViewController, UITextViewDelegate {
 
     let firebaseViewManager = MCALifeGraphFirebaseManager()
     
+    var timer: Timer!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -38,7 +40,15 @@ class MCALifeGraphViewController: UIViewController, UITextViewDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
+        firebaseViewManager.contentView = contentView
     }
+    
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(true)
+        firebaseViewManager.uploadContentToFirebase()
+    }
+    
     
     var contentOffset: CGFloat = 20
     
@@ -102,13 +112,9 @@ class MCALifeGraphViewController: UIViewController, UITextViewDelegate {
         checkViewForCollisions(view: newIcon)
         contentView.addSubview(newIcon)
         contentView.bringSubview(toFront: newIcon)
-
     }
     
-    @IBAction func unwindToGraph(segue:UIStoryboardSegue) {
-        
-        
-    }
+    @IBAction func unwindToGraph(segue:UIStoryboardSegue) {}
 
     // TODO: This is bad and you should feel bad. The locations will eventually run out, and the scrolling should have the view in the center
     private func checkViewForCollisions(view: UIView) {
@@ -129,22 +135,36 @@ class MCALifeGraphViewController: UIViewController, UITextViewDelegate {
         }
     }
     
+    // TODO: This should be one function, not calling two
     
     fileprivate func checkForViewsFromFIR() {
         DispatchQueue.global(qos: .userInitiated).async {
             // Download file or perform expensive task
             self.firebaseViewManager.decodeViewsFromFirebase(completion: { (contents) in
-                let viewsToAdd = self.firebaseViewManager.convertModelToViews(contents)
-                DispatchQueue.main.async {
-                    // Update the UI
-                    for views in viewsToAdd {
-                        self.contentView.addSubview(views)
+                print("this gets called")
+                if contents != nil {
+                    let viewsToAdd = self.firebaseViewManager.convertModelToViews(contents!)
+                    DispatchQueue.main.async {
+                        // Update the UI
+                        for views in viewsToAdd {
+                            self.contentView.addSubview(views)
+                        }
                     }
-                    
+                } else {
+                    DispatchQueue.main.async {
+                        self.startAutoSaveTimer()
+                    }
                 }
             })
-            
         }
+    }
+    
+    func startAutoSaveTimer() {
+        timer = Timer.scheduledTimer(withTimeInterval: 15, repeats: true, block: { (_) in
+            print("uploading")
+            self.firebaseViewManager.uploadContentToFirebase()
+        })
+        
     }
     
 

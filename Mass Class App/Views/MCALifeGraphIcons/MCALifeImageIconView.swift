@@ -81,7 +81,6 @@ class MCALifeImageIconView: MCALifeGraphIconBaseView {
         return userImagesRef
     }
     
-    
     func addImageView() {
         imageView = UIImageView(frame: self.bounds)
         imageView.autoresizingMask = [.flexibleHeight, .flexibleWidth]

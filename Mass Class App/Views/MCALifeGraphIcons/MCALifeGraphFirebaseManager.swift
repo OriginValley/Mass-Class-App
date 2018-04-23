@@ -19,7 +19,7 @@ class MCALifeGraphFirebaseManager {
     var ref: DatabaseReference!
     var handle: DatabaseHandle!
     
-    func encodeContentView(_ contentView: UIView) -> MCAlifeGraphContentsCodable {
+    private func encodeContentView(_ contentView: UIView) -> MCAlifeGraphContentsCodable {
         
         var childIcons = [MCALifeGraphIconBaseViewCodable]()
         var childNoteIcons = [MCALifeGraphIconNoteViewCodable]()
@@ -80,7 +80,7 @@ class MCALifeGraphFirebaseManager {
     }
     
     // TODO: Completion handler here maybe
-    func decodeViewsFromFirebase(completion: @escaping (MCAlifeGraphContentsCodable) -> Void) {
+    func decodeViewsFromFirebase(completion: @escaping (MCAlifeGraphContentsCodable?) -> Void) {
         var contents: MCAlifeGraphContentsCodable?
         
         guard let userIdentifier = Auth.auth().currentUser?.uid else {
@@ -97,6 +97,7 @@ class MCALifeGraphFirebaseManager {
                 let model = try FirebaseDecoder().decode(MCAlifeGraphContentsCodable.self, from: value)
                 completion(model)
             } catch let error {
+                completion(nil)
                 print(error)
             }
         })
@@ -112,7 +113,7 @@ class MCALifeGraphFirebaseManager {
         
         for icons in childIcons {
             //TODO: add BG color
-            let newIcon = MCALifeGraphIconBaseView(frame: icons.frame)
+            let newIcon = MCALifeGraphIconBaseView(frame: icons.frame, bgColor: UIColor.white, identifier: icons.identifier)
             views.append(newIcon)
         }
         
@@ -126,7 +127,7 @@ class MCALifeGraphFirebaseManager {
         
         for icons in childImages {
             let newImage = MCALifeImageIconView(frame: icons.frame
-                , image: #imageLiteral(resourceName: "Company"))
+                , identifier: icons.identifier)
             views.append(newImage)
         }
         return views
