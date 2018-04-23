@@ -17,6 +17,8 @@ class MCALifeGraphIconBaseView: UIView{
     
     var identifier: String?
     
+    var shouldDeleteDelegate: ShouldDeleteIcon! = nil
+    
     func randomIdentifier(length: Int = 20) -> String {
         let base = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
         var randomString: String = ""
@@ -71,6 +73,10 @@ class MCALifeGraphIconBaseView: UIView{
         self.addGestureRecognizer(panGestureRecognizer)
         let pinchGestureRecognizer = UIPinchGestureRecognizer(target: self, action: #selector(dealWithPinch(_:)))
         self.addGestureRecognizer(pinchGestureRecognizer)
+        let longPressGestureRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(dealWithLongPress(_:)))
+        longPressGestureRecognizer.minimumPressDuration = 1.5
+        self.addGestureRecognizer(longPressGestureRecognizer)
+        
     }
     
     var shouldDrawShadow = false {
@@ -83,6 +89,13 @@ class MCALifeGraphIconBaseView: UIView{
                 removeShadow()
             }
         }
+    }
+    
+    @objc func dealWithLongPress(_ longPress: UILongPressGestureRecognizer) {
+        print("longpressed")
+        shouldDeleteDelegate.deleteIcon(self)
+        
+        
     }
     
     @objc func dealWithPan(_ panGesture: UIPanGestureRecognizer) {

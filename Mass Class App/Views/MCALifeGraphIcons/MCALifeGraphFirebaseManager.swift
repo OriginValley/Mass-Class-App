@@ -19,6 +19,8 @@ class MCALifeGraphFirebaseManager {
     var ref: DatabaseReference!
     var handle: DatabaseHandle!
     
+    // TODO: The better way to do this is to keep track of changes only and upload those, but this works fine for now and is faster
+    
     private func encodeContentView(_ contentView: UIView) -> MCAlifeGraphContentsCodable {
         
         var childIcons = [MCALifeGraphIconBaseViewCodable]()
@@ -68,7 +70,12 @@ class MCALifeGraphFirebaseManager {
         
         guard let graphContentView = contentView else { return }
         let contents = encodeContentView(graphContentView)
+        let testData = try! JSONEncoder().encode(contents)
+        let string = String(data: testData, encoding: .utf8)
+        print(string)
+        
         let firData = try! FirebaseEncoder().encode(contents)
+        
         ref = Database.database().reference()
         guard let userIdentifier = Auth.auth().currentUser?.uid else {
             print("not logged in!")
@@ -88,7 +95,7 @@ class MCALifeGraphFirebaseManager {
             return
         }
         ref = Database.database().reference()
-
+        
         ref.child(userIdentifier).child("my first graph").observeSingleEvent(of: .value, with: { (snapshot) in
             guard let value = snapshot.value else { return }
             
@@ -101,38 +108,41 @@ class MCALifeGraphFirebaseManager {
                 print(error)
             }
         })
-//        handle = ref.child(userIdentifier).child("my first graph").observe(.childAdded, with: { (snapshot) in
-//
-//        })
-}
+        //        handle = ref.child(userIdentifier).child("my first graph").observe(.childAdded, with: { (snapshot) in
+        //
+        //        })
+    }
     
     func convertModelToViews(_ model: MCAlifeGraphContentsCodable) -> [MCALifeGraphIconBaseView] {
         var views = [MCALifeGraphIconBaseView]()
         
-        let childIcons = model.childIcons
-        
-        for icons in childIcons {
-            //TODO: add BG color
-            let newIcon = MCALifeGraphIconBaseView(frame: icons.frame, bgColor: UIColor.white, identifier: icons.identifier)
-            views.append(newIcon)
+        if let childIcons = model.childIcons {
+            for icons in childIcons {
+                //TODO: add BG color
+                let newIcon = MCALifeGraphIconBaseView(frame: icons.frame, bgColor: UIColor.white, identifier: icons.identifier)
+                views.append(newIcon)
+            }
         }
         
-        let childNotes = model.childNoteIcons
-        for icons in childNotes {
-            let newNote = MCALifeGraphIconNoteView(frame: icons.frame
-                , textToDisplay: icons.noteContents)
-            views.append(newNote)
+        if let childNotes = model.childNoteIcons {
+            for icons in childNotes {
+                let newNote = MCALifeGraphIconNoteView(frame: icons.frame
+                    , textToDisplay: icons.noteContents)
+                views.append(newNote)
+            }
         }
-        let childImages = model.childImageIcons
+        if let childImages = model.childImageIcons {
+            for icons in childImages {
+                let newImage = MCALifeImageIconView(frame: icons.frame
+                    , identifier: icons.identifier)
+                views.append(newImage)
+            }
+            
+        }
         
-        for icons in childImages {
-            let newImage = MCALifeImageIconView(frame: icons.frame
-                , identifier: icons.identifier)
-            views.append(newImage)
-        }
         return views
     }
-
-
-
+    
+    
+    
 }

@@ -782,7 +782,7 @@
         <!--LifeGraphNav-->
         <scene sceneID="ZlB-BG-XLL">
             <objects>
-                <navigationController title="LifeGraphNav" automaticallyAdjustsScrollViewInsets="NO" id="hMD-v3-ErU" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="LifeGraphNav" title="LifeGraphNav" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="hMD-v3-ErU" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="rCw-uu-9wR">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>

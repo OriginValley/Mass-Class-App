@@ -38,7 +38,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
             TWTRTwitter.sharedInstance().start(withConsumerKey:"AA7kmNYAMX8K5Yg7gAyUCbV3Z", consumerSecret:"QSdgTg3HeGW6PvWO4N3zuUlHvOlSYyE92NU2XusNYEE4fwKdUc")
             
-//            setupFIRAuth()
+            setupFIRAuth()
             
             return true
     }
@@ -95,7 +95,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     private func showMainScreen() {
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-        let userVC = storyBoard.instantiateViewController(withIdentifier: "LifeGraph") as! MCALifeGraphViewController
+        let userVC = storyBoard.instantiateViewController(withIdentifier: "LifeGraphNav") as! UINavigationController
         self.window = UIWindow(frame: UIScreen.main.bounds)
         self.window?.rootViewController = userVC
         self.window?.makeKeyAndVisible()

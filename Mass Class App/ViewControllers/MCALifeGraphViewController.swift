@@ -10,7 +10,7 @@ import UIKit
 import Firebase
 import CodableFirebase
 
-class MCALifeGraphViewController: UIViewController, UITextViewDelegate {
+class MCALifeGraphViewController: UIViewController, UITextViewDelegate, ShouldDeleteIcon {
 
     @IBOutlet weak var testTextView: UITextView!
     
@@ -88,6 +88,7 @@ class MCALifeGraphViewController: UIViewController, UITextViewDelegate {
         let newIcon = MCALifeGraphIconBaseView(frame: newIconFrame)
         newIcon.contentView = contentView
         newIcon.scrollView = scrollView
+        newIcon.shouldDeleteDelegate = self
         checkViewForCollisions(view: newIcon)
         contentView.addSubview(newIcon)
         contentView.bringSubview(toFront: newIcon)
@@ -101,6 +102,8 @@ class MCALifeGraphViewController: UIViewController, UITextViewDelegate {
         let newIcon = MCALifeGraphIconNoteView(frame: newIconFrame)
         newIcon.contentView = contentView
         newIcon.scrollView = scrollView
+        newIcon.shouldDeleteDelegate = self
+
         checkViewForCollisions(view: newIcon)
         contentView.addSubview(newIcon)
         contentView.bringSubview(toFront: newIcon)
@@ -114,6 +117,7 @@ class MCALifeGraphViewController: UIViewController, UITextViewDelegate {
         let newIcon = MCALifeImageIconView(frame: newIconFrame, image: image)
         newIcon.contentView = contentView
         newIcon.scrollView = scrollView
+        newIcon.shouldDeleteDelegate = self
         checkViewForCollisions(view: newIcon)
         contentView.addSubview(newIcon)
         contentView.bringSubview(toFront: newIcon)
@@ -156,6 +160,8 @@ class MCALifeGraphViewController: UIViewController, UITextViewDelegate {
                         for views in viewsToAdd {
                             views.contentView = self.contentView
                             views.scrollView = self.scrollView
+                            views.shouldDeleteDelegate = self
+                            self.contentView.bringSubview(toFront: views)
                             self.contentView.addSubview(views)
                         }
                         self.startAutoSaveTimer()
@@ -174,9 +180,24 @@ class MCALifeGraphViewController: UIViewController, UITextViewDelegate {
             print("uploading")
             self.firebaseViewManager.uploadContentToFirebase()
         })
-        
     }
     
+    func deleteIcon(_ icon: MCALifeGraphIconBaseView) {
+        let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        let deleteAction = UIAlertAction(title: "Delete Icon", style: .destructive) { (action) in
+            icon.removeFromSuperview()
+            self.firebaseViewManager.uploadContentToFirebase()
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        actionSheet.addAction(deleteAction)
+        actionSheet.addAction(cancelAction)
+        self.present(actionSheet, animated: true, completion: nil)
+        
+        
+    }
+}
 
 
+protocol ShouldDeleteIcon {
+    func deleteIcon(_ icon: MCALifeGraphIconBaseView)
 }

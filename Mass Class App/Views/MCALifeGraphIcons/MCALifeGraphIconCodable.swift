@@ -81,11 +81,11 @@ struct MCAlifeGraphContentsCodable: Codable {
     
     var graphBackgroundColor: MCAColor
     
-    var childIcons: [MCALifeGraphIconBaseViewCodable]
+    var childIcons: [MCALifeGraphIconBaseViewCodable]?
     
-    var childNoteIcons: [MCALifeGraphIconNoteViewCodable]
+    var childNoteIcons: [MCALifeGraphIconNoteViewCodable]?
     
-    var childImageIcons: [MCALifeImageIconViewCodable]
+    var childImageIcons: [MCALifeImageIconViewCodable]?
     
     
     
