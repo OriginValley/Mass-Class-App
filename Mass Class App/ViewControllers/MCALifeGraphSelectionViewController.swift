@@ -85,7 +85,6 @@ class MCALifeGraphSelectionViewController: UIViewController {
                 source.addNoteIcon()
                 print("note")
             case .changeBackground:
-                source.uploadToFirebase()
                 print("background")
             case .cancel:
                 print("Cancel")
