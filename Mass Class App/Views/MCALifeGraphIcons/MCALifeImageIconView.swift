@@ -92,6 +92,7 @@ class MCALifeImageIconView: MCALifeGraphIconBaseView {
             storeImageInFirebase(image: image)
         }
         imageView.contentMode = .scaleAspectFill
+        imageView.drawCornerRadius(8)
         self.addSubview(imageView)
         self.bringSubview(toFront: imageView)
     }

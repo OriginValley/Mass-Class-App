@@ -43,6 +43,7 @@ class MCALifeGraphIconNoteView: MCALifeGraphIconBaseView, UITextViewDelegate {
         textView.text = "Placeholder"
         textView.delegate = self
         textView.font = UIFont.init(name: "Avenir-Next", size: 13.0)
+        textView.drawCornerRadius(8)
         self.addSubview(textView)
         self.bringSubview(toFront: textView)
     }

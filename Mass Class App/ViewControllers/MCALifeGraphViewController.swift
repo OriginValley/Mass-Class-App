@@ -47,6 +47,7 @@ class MCALifeGraphViewController: UIViewController, UITextViewDelegate {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(true)
         firebaseViewManager.uploadContentToFirebase()
+        timer.invalidate()
     }
     
     
@@ -157,6 +158,7 @@ class MCALifeGraphViewController: UIViewController, UITextViewDelegate {
                             views.scrollView = self.scrollView
                             self.contentView.addSubview(views)
                         }
+                        self.startAutoSaveTimer()
                     }
                 } else {
                     DispatchQueue.main.async {
@@ -168,7 +170,7 @@ class MCALifeGraphViewController: UIViewController, UITextViewDelegate {
     }
     
     func startAutoSaveTimer() {
-        timer = Timer.scheduledTimer(withTimeInterval: 15, repeats: true, block: { (_) in
+        timer = Timer.scheduledTimer(withTimeInterval: 5, repeats: true, block: { (_) in
             print("uploading")
             self.firebaseViewManager.uploadContentToFirebase()
         })

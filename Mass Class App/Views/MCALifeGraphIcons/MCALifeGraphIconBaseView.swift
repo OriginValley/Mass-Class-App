@@ -44,6 +44,7 @@ class MCALifeGraphIconBaseView: UIView{
         
         self.backgroundColor = bgColor
         self.identifier = identifier
+        self.drawCornerRadius(8)
     }
     
     
@@ -53,6 +54,7 @@ class MCALifeGraphIconBaseView: UIView{
         setUpGestures()
         self.identifier = randomIdentifier()
         setRandomBackgroundColor()
+        self.drawCornerRadius(8)
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -60,6 +62,8 @@ class MCALifeGraphIconBaseView: UIView{
         setUpGestures()
         self.identifier = randomIdentifier()
         setRandomBackgroundColor()
+        self.drawCornerRadius(8)
+
     }
     
     private func setUpGestures() {
