@@ -90,6 +90,8 @@ class MCALifeGraphViewController: UIViewController, UITextViewDelegate {
         checkViewForCollisions(view: newIcon)
         contentView.addSubview(newIcon)
         contentView.bringSubview(toFront: newIcon)
+        firebaseViewManager.uploadContentToFirebase()
+
     }
     
     func addNoteIcon() {
@@ -101,6 +103,8 @@ class MCALifeGraphViewController: UIViewController, UITextViewDelegate {
         checkViewForCollisions(view: newIcon)
         contentView.addSubview(newIcon)
         contentView.bringSubview(toFront: newIcon)
+        firebaseViewManager.uploadContentToFirebase()
+
     }
     
     func addImageIcon(image: UIImage) {
@@ -112,6 +116,8 @@ class MCALifeGraphViewController: UIViewController, UITextViewDelegate {
         checkViewForCollisions(view: newIcon)
         contentView.addSubview(newIcon)
         contentView.bringSubview(toFront: newIcon)
+        firebaseViewManager.uploadContentToFirebase()
+
     }
     
     @IBAction func unwindToGraph(segue:UIStoryboardSegue) {}
@@ -147,6 +153,8 @@ class MCALifeGraphViewController: UIViewController, UITextViewDelegate {
                     DispatchQueue.main.async {
                         // Update the UI
                         for views in viewsToAdd {
+                            views.contentView = self.contentView
+                            views.scrollView = self.scrollView
                             self.contentView.addSubview(views)
                         }
                     }
