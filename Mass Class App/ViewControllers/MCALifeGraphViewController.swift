@@ -29,20 +29,7 @@ class MCALifeGraphViewController: UIViewController, UITextViewDelegate {
         contentView.addSubview(imageView)
         contentView.sendSubview(toBack: imageView)
         
-        DispatchQueue.global(qos: .userInitiated).async {
-            // Download file or perform expensive task
-            self.firebaseViewManager.decodeViewsFromFirebase(completion: { (contents) in
-                let viewsToAdd = self.firebaseViewManager.convertModelToViews(contents)
-                DispatchQueue.main.async {
-                    // Update the UI
-                    for views in viewsToAdd {
-                        self.contentView.addSubview(views)
-                    }
-                    
-                }
-            })
-
-        }
+        checkForViewsFromFIR()
 
     }
     
@@ -139,6 +126,24 @@ class MCALifeGraphViewController: UIViewController, UITextViewDelegate {
                 }
                 
             }
+        }
+    }
+    
+    
+    fileprivate func checkForViewsFromFIR() {
+        DispatchQueue.global(qos: .userInitiated).async {
+            // Download file or perform expensive task
+            self.firebaseViewManager.decodeViewsFromFirebase(completion: { (contents) in
+                let viewsToAdd = self.firebaseViewManager.convertModelToViews(contents)
+                DispatchQueue.main.async {
+                    // Update the UI
+                    for views in viewsToAdd {
+                        self.contentView.addSubview(views)
+                    }
+                    
+                }
+            })
+            
         }
     }
     

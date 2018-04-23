@@ -15,10 +15,19 @@ class MCALifeGraphIconBaseView: UIView{
     
     var contentOffset: CGFloat = 20
     
-    
-    //TODO: some way to create a unique identifer for each view. 
-
     var identifier: String?
+    
+    func randomIdentifier(length: Int = 20) -> String {
+        let base = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+        var randomString: String = ""
+        
+        for _ in 0..<length {
+            let randomValue = arc4random_uniform(UInt32(base.count))
+            randomString += "\(base[base.index(base.startIndex, offsetBy: Int(randomValue))])"
+        }
+        return randomString
+    }
+
     
     fileprivate func setRandomBackgroundColor() {
         let randomOne = CGFloat(arc4random_uniform(UInt32(255)))
@@ -42,14 +51,14 @@ class MCALifeGraphIconBaseView: UIView{
     override init(frame: CGRect) {
         super.init(frame: frame)
         setUpGestures()
-        
+        self.identifier = randomIdentifier()
         setRandomBackgroundColor()
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setUpGestures()
-        
+        self.identifier = randomIdentifier()
         setRandomBackgroundColor()
     }
     
@@ -58,8 +67,6 @@ class MCALifeGraphIconBaseView: UIView{
         self.addGestureRecognizer(panGestureRecognizer)
         let pinchGestureRecognizer = UIPinchGestureRecognizer(target: self, action: #selector(dealWithPinch(_:)))
         self.addGestureRecognizer(pinchGestureRecognizer)
-
-        
     }
     
     var shouldDrawShadow = false {

@@ -68,6 +68,10 @@ struct MCAColor: Codable {
     var green: Double
     var alpha: Double
     
+//    init(uiColor: UIColor) {
+//        self.red = uiColor.cgColor.components[0]
+//    }
+    
 }
 
 

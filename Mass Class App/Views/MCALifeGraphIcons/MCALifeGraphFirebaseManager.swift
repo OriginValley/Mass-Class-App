@@ -28,20 +28,24 @@ class MCALifeGraphFirebaseManager {
         for view in contentView.subviews {
             //This is a bad way to do this. It works, but we have to check for subclasses first since they all inherit from the same base class.
             if view.isKind(of: MCALifeGraphIconNoteView.self) {
+                let viewAsNote = view as! MCALifeGraphIconNoteView
+                let text = viewAsNote.textView.text
                 let newNoteCodable = MCALifeGraphIconNoteViewCodable(frame: view.frame,
-                                                                     identifier: "identifier",
+                                                                     identifier:viewAsNote.identifier!,
                                                                      bgColor: MCAColor(red: 1, blue: 1, green: 1, alpha: 1),
-                                                                     noteContents: "blah blah blah blah")
+                                                                     noteContents: text!)
                 childNoteIcons.append(newNoteCodable)
             } else if view.isKind(of: MCALifeImageIconView.self) {
+                let viewAsImageIcon = view as! MCALifeImageIconView
                 let newImageCodable = MCALifeImageIconViewCodable(frame: view.frame,
-                                                                  identifier: "identifier",
+                                                                  identifier: viewAsImageIcon.identifier!,
                                                                   bgColor: MCAColor(red: 1, blue: 1, green: 1, alpha: 1),
                                                                   imageLocation: "none yet")
                 childIconImages.append(newImageCodable)
             } else if view.isKind(of: MCALifeGraphIconBaseView.self) {
+                let viewAsBaseIcon = view as!  MCALifeGraphIconBaseView
                 let newIconCodable = MCALifeGraphIconBaseViewCodable(frame: view.frame,
-                                                                     identifier: "identifier",
+                                                                     identifier: viewAsBaseIcon.identifier!,
                                                                      bgColor: MCAColor(red: 1, blue: 1, green: 1, alpha: 1))
                 childIcons.append(newIconCodable)
                 

@@ -17,6 +17,7 @@ pod 'FacebookLogin'
 pod 'FacebookShare'
 pod 'TwitterKit'
 pod 'CodableFirebase'
+pod 'FirebaseUI/Storage'
 
   target 'Mass Class AppTests' do
     inherit! :search_paths
