@@ -33,7 +33,9 @@
 		D12965812079B98A0005414B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12965802079B98A0005414B /* LoginViewController.swift */; };
 		D12965832079B9920005414B /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12965822079B9920005414B /* ResetPasswordViewController.swift */; };
 		D12965852079B9A30005414B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D12965842079B9A30005414B /* Main.storyboard */; };
+		D1446E332084F93600426E53 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D1446E322084F93500426E53 /* GoogleService-Info.plist */; };
 		D147D94F207A8F5A003D4FD4 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D147D94E207A8F5A003D4FD4 /* WelcomeViewController.swift */; };
+		D157A90C208E3A2E003AACDE /* RecordsUpload.swift in Sources */ = {isa = PBXBuildFile; fileRef = D157A90B208E3A2E003AACDE /* RecordsUpload.swift */; };
 		D1838D092072D1E6005F5E71 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1838D082072D1E6005F5E71 /* AppDelegate.swift */; };
 		D1838D0B2072D1E6005F5E71 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1838D0A2072D1E6005F5E71 /* ViewController.swift */; };
 		D1838D112072D1E6005F5E71 /* Mass_Class_App.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D1838D0F2072D1E6005F5E71 /* Mass_Class_App.xcdatamodeld */; };
@@ -95,7 +97,9 @@
 		D12965802079B98A0005414B /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D12965822079B9920005414B /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		D12965842079B9A30005414B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		D1446E322084F93500426E53 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D147D94E207A8F5A003D4FD4 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		D157A90B208E3A2E003AACDE /* RecordsUpload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsUpload.swift; sourceTree = "<group>"; };
 		D1838D052072D1E6005F5E71 /* Mass Class App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mass Class App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1838D082072D1E6005F5E71 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D1838D0A2072D1E6005F5E71 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -269,6 +273,7 @@
 				6B0D3DDB2085490700AB3F1E /* Mass Class App.entitlements */,
 				6B0D3DC1208460ED00AB3F1E /* GoogleService-Info.plist */,
 				D1838D082072D1E6005F5E71 /* AppDelegate.swift */,
+				D157A90B208E3A2E003AACDE /* RecordsUpload.swift */,
 				D147D94E207A8F5A003D4FD4 /* WelcomeViewController.swift */,
 				D129657E2079B9840005414B /* SignUpViewController.swift */,
 				D129657C2079B97B0005414B /* HomeViewController.swift */,
@@ -281,6 +286,7 @@
 				D1838D122072D1E6005F5E71 /* Assets.xcassets */,
 				D1838D142072D1E6005F5E71 /* LaunchScreen.storyboard */,
 				D1838D172072D1E6005F5E71 /* Info.plist */,
+				D1446E322084F93500426E53 /* GoogleService-Info.plist */,
 				D1838D0F2072D1E6005F5E71 /* Mass_Class_App.xcdatamodeld */,
 			);
 			path = "Mass Class App";
@@ -440,6 +446,7 @@
 			files = (
 				6B0D3DC2208460ED00AB3F1E /* GoogleService-Info.plist in Resources */,
 				D1838D162072D1E6005F5E71 /* LaunchScreen.storyboard in Resources */,
+				D1446E332084F93600426E53 /* GoogleService-Info.plist in Resources */,
 				D1838D132072D1E6005F5E71 /* Assets.xcassets in Resources */,
 				D1DCC18C2083F13F00C55C44 /* Settings.bundle in Resources */,
 				6B0D3DC820853A8C00AB3F1E /* MCAAuthPickerView.xib in Resources */,
@@ -682,6 +689,7 @@
 				6B8DAA7F208C0CBB00390154 /* MCALifeGraphIconNoteView.swift in Sources */,
 				6B8DAA7B208BCBDA00390154 /* Constants.swift in Sources */,
 				6B8DAA77208BCB0D00390154 /* SlideInPresentationAnimator.swift in Sources */,
+				D157A90C208E3A2E003AACDE /* RecordsUpload.swift in Sources */,
 				6B0D3DC5208467C100AB3F1E /* MCAAuthPickerViewController.swift in Sources */,
 				6B7B4C00208D51C30051276F /* MCALifeGraphContentCanvasView.swift in Sources */,
 				D147D94F207A8F5A003D4FD4 /* WelcomeViewController.swift in Sources */,
@@ -862,7 +870,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Mass Class App/Mass Class App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8K7R4W5UEW;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Mass Class App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
@@ -880,7 +888,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "Mass Class App/Mass Class App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8K7R4W5UEW;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Mass Class App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.victororourke.Mass-Class-App";
