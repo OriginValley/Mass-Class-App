@@ -95,7 +95,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     private func showMainScreen() {
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-        let userVC = storyBoard.instantiateViewController(withIdentifier: "LifeGraphNav") as! UINavigationController
+        let userVC = storyBoard.instantiateViewController(withIdentifier: "Home") as! HomeViewController
         self.window = UIWindow(frame: UIScreen.main.bounds)
         self.window?.rootViewController = userVC
         self.window?.makeKeyAndVisible()

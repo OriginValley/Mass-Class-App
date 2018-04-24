@@ -10,6 +10,8 @@
 		343E30076266A382C1F13666 /* Pods_Mass_Class_AppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 711035FC11D70F065543791C /* Pods_Mass_Class_AppTests.framework */; };
 		4D3BF99E2152AD2B3ED0055F /* Pods_Mass_Class_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2491139F46071B002A2D1CE /* Pods_Mass_Class_App.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		595D8A4AB3196B42AEE47679 /* Pods_Mass_Class_AppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9978E962F8A76DE4D04842B6 /* Pods_Mass_Class_AppUITests.framework */; };
+		6B028CB8208EF22E002A0141 /* MCAShouldDeleteIconProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B028CB7208EF22E002A0141 /* MCAShouldDeleteIconProtocol.swift */; };
+		6B028CBA208EF4FE002A0141 /* MCALifeGraphSelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B028CB9208EF4FE002A0141 /* MCALifeGraphSelectorViewController.swift */; };
 		6B0D3DC2208460ED00AB3F1E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6B0D3DC1208460ED00AB3F1E /* GoogleService-Info.plist */; };
 		6B0D3DC5208467C100AB3F1E /* MCAAuthPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B0D3DC4208467C100AB3F1E /* MCAAuthPickerViewController.swift */; };
 		6B0D3DC820853A8C00AB3F1E /* MCAAuthPickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B0D3DC720853A8C00AB3F1E /* MCAAuthPickerView.xib */; };
@@ -69,6 +71,8 @@
 		2680F5B5535916BD4BE14E56 /* Pods-Mass Class AppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mass Class AppUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Mass Class AppUITests/Pods-Mass Class AppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		2A1461F172D58BC5503E1DC7 /* Pods-Mass Class AppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mass Class AppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Mass Class AppTests/Pods-Mass Class AppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		609733BCEE07A2CBD715EE69 /* Pods-Mass Class AppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mass Class AppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Mass Class AppTests/Pods-Mass Class AppTests.release.xcconfig"; sourceTree = "<group>"; };
+		6B028CB7208EF22E002A0141 /* MCAShouldDeleteIconProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCAShouldDeleteIconProtocol.swift; sourceTree = "<group>"; };
+		6B028CB9208EF4FE002A0141 /* MCALifeGraphSelectorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCALifeGraphSelectorViewController.swift; sourceTree = "<group>"; };
 		6B0D3DC1208460ED00AB3F1E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6B0D3DC4208467C100AB3F1E /* MCAAuthPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCAAuthPickerViewController.swift; sourceTree = "<group>"; };
 		6B0D3DC720853A8C00AB3F1E /* MCAAuthPickerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MCAAuthPickerView.xib; sourceTree = "<group>"; };
@@ -189,6 +193,7 @@
 		6B8DAA6F208BC9CC00390154 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				6B028CB7208EF22E002A0141 /* MCAShouldDeleteIconProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -217,6 +222,7 @@
 				6B8DAA6C208BC91100390154 /* MCALifeGraphSelectionViewController.swift */,
 				6B16B1D420845F9E00A2DDC2 /* MCAAuth.swift */,
 				6B0D3DC4208467C100AB3F1E /* MCAAuthPickerViewController.swift */,
+				6B028CB9208EF4FE002A0141 /* MCALifeGraphSelectorViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -686,8 +692,14 @@
 			files = (
 				D12965812079B98A0005414B /* LoginViewController.swift in Sources */,
 				D1F7EDB3208ED29100075616 /* CameraActions.swift in Sources */,
+				6B7B4BFD208D404A0051276F /* MCALifeGraphFirebaseManager.swift in Sources */,
+				6B028CB8208EF22E002A0141 /* MCAShouldDeleteIconProtocol.swift in Sources */,
+				6B8DAA7F208C0CBB00390154 /* MCALifeGraphIconNoteView.swift in Sources */,
+				6B8DAA7B208BCBDA00390154 /* Constants.swift in Sources */,
+				6B8DAA77208BCB0D00390154 /* SlideInPresentationAnimator.swift in Sources */,
 				6B0D3DC5208467C100AB3F1E /* MCAAuthPickerViewController.swift in Sources */,
 				6B7B4C00208D51C30051276F /* MCALifeGraphContentCanvasView.swift in Sources */,
+				6B028CBA208EF4FE002A0141 /* MCALifeGraphSelectorViewController.swift in Sources */,
 				D147D94F207A8F5A003D4FD4 /* WelcomeViewController.swift in Sources */,
 				D1838D112072D1E6005F5E71 /* Mass_Class_App.xcdatamodeld in Sources */,
 				6B8DAA6B208AF8D400390154 /* MCALifeGraphViewController.swift in Sources */,

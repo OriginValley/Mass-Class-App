@@ -66,7 +66,7 @@ class MCALifeGraphFirebaseManager {
         //        return graphJSONData
     }
     
-    func uploadContentToFirebase() {
+    func uploadContentToFirebase(for graph: LifeGraphOptions) {
         
         guard let graphContentView = contentView else { return }
         let contents = encodeContentView(graphContentView)
@@ -81,13 +81,13 @@ class MCALifeGraphFirebaseManager {
             print("not logged in!")
             return
         }
-        ref.child(userIdentifier).child("my first graph").setValue(firData)
+        ref.child(userIdentifier).child(graph.rawValue).setValue(firData)
         
         //        self.ref = Database.datab
     }
     
     // TODO: Completion handler here maybe
-    func decodeViewsFromFirebase(completion: @escaping (MCAlifeGraphContentsCodable?) -> Void) {
+    func decodeViewsFromFirebase(for graph: LifeGraphOptions, completion: @escaping (MCAlifeGraphContentsCodable?) -> Void) {
         var contents: MCAlifeGraphContentsCodable?
         
         guard let userIdentifier = Auth.auth().currentUser?.uid else {
@@ -96,7 +96,7 @@ class MCALifeGraphFirebaseManager {
         }
         ref = Database.database().reference()
         
-        ref.child(userIdentifier).child("my first graph").observeSingleEvent(of: .value, with: { (snapshot) in
+        ref.child(userIdentifier).child(graph.rawValue).observeSingleEvent(of: .value, with: { (snapshot) in
             guard let value = snapshot.value else { return }
             
             

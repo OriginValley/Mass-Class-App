@@ -85,7 +85,7 @@ class MCALifeGraphSelectionViewController: UIViewController {
                 source.addNoteIcon()
                 print("note")
             case .changeBackground:
-                print("background")
+                source.switchBackgroundColor()
             case .cancel:
                 print("Cancel")
             }
