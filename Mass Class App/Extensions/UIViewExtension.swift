@@ -15,11 +15,20 @@ extension UIView {
     }
 
     func drawShadow() {
-        self.layer.shadowColor = UIColor.black.cgColor
-        self.layer.shadowRadius = 1.75
-        self.layer.shadowOffset = CGSize(width: 0.5, height: 0.5)
-        self.layer.shadowOpacity = 0.75
+        UIView.animate(withDuration: 0.25) {
+            self.layer.shadowColor = UIColor.black.cgColor
+            self.layer.shadowRadius = 1.75
+            self.layer.shadowOffset = CGSize(width: 0.75, height: 0.75)
+            self.layer.shadowOpacity = 0.75
+        }
+
 //        self.layer.shouldRasterize = true
+    }
+    
+    func removeShadow() {
+        UIView.animate(withDuration: 0.25) {
+            self.layer.shadowOpacity = 0
+        }
     }
 
 

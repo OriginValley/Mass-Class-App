@@ -36,4 +36,7 @@ class MCAAuthPickerViewController: FUIAuthPickerViewController {
         self.navigationController?.isNavigationBarHidden = true
         self.view.drawGradient(colors: mainGradientColors)
     }
+    
+    
+    
 }

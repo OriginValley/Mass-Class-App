@@ -1,2 +1,14 @@
 
 Mass Class App/GoogleService-Info\.plist
+Pods/
+/Pods/Target Support Files/Pods-Mass Class AppTests/Pods-Mass Class AppTests.release.xcconfig
+/Pods/Target Support Files/Pods-Mass Class App/Pods-Mass Class App.debug.xcconfig
+/Pods/Target Support Files/Pods-Mass Class App/Pods-Mass Class App-frameworks.sh
+/Pods/Target Support Files/Pods-Mass Class App/Pods-Mass Class App.release.xcconfig
+/Pods/Target Support Files/Pods-Mass Class AppTests/Pods-Mass Class AppTests.debug.xcconfig
+/Pods/Target Support Files/Pods-Mass Class App/Pods-Mass Class App-acknowledgements.plist
+/Pods/Manifest.lock
+/Pods/Target Support Files/Pods-Mass Class AppUITests/Pods-Mass Class AppUITests.release.xcconfig
+/Pods/Target Support Files/Pods-Mass Class App/Pods-Mass Class App-acknowledgements.markdown
+/Pods/Target Support Files/Pods-Mass Class AppUITests/Pods-Mass Class AppUITests.debug.xcconfig
+/Pods/Pods.xcodeproj/project.pbxproj
