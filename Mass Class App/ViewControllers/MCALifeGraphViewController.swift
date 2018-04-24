@@ -26,10 +26,10 @@ class MCALifeGraphViewController: UIViewController, UITextViewDelegate, ShouldDe
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let imageView = UIImageView(frame: contentView.frame)
-        imageView.image = #imageLiteral(resourceName: "dots-polka-white-spots-blue-1920x1080-c2-ffffff-40e0d0-l2-15-34-a-315-f-3")
-        contentView.addSubview(imageView)
-        contentView.sendSubview(toBack: imageView)
+//        let imageView = UIImageView(frame: contentView.frame)
+//        imageView.image = #imageLiteral(resourceName: "dots-polka-white-spots-blue-1920x1080-c2-ffffff-40e0d0-l2-15-34-a-315-f-3")
+//        contentView.addSubview(imageView)
+//        contentView.sendSubview(toBack: imageView)
         
         checkForViewsFromFIR()
 
@@ -192,8 +192,11 @@ class MCALifeGraphViewController: UIViewController, UITextViewDelegate, ShouldDe
         actionSheet.addAction(deleteAction)
         actionSheet.addAction(cancelAction)
         self.present(actionSheet, animated: true, completion: nil)
-        
-        
+    }
+    
+    
+    func changeBackgroundToColor(_ color: UIColor) {
+        self.view.backgroundColor = color
     }
 }
 
