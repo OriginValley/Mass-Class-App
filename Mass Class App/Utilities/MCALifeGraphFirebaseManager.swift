@@ -86,7 +86,6 @@ class MCALifeGraphFirebaseManager {
         //        self.ref = Database.datab
     }
     
-    // TODO: Completion handler here maybe
     func decodeViewsFromFirebase(for graph: LifeGraphOptions, completion: @escaping (MCAlifeGraphContentsCodable?) -> Void) {
         var contents: MCAlifeGraphContentsCodable?
         
@@ -118,7 +117,6 @@ class MCALifeGraphFirebaseManager {
         
         if let childIcons = model.childIcons {
             for icons in childIcons {
-                //TODO: add BG color
                 let newIcon = MCALifeGraphIconBaseView(frame: icons.frame, bgColor: UIColor.white, identifier: icons.identifier)
                 views.append(newIcon)
             }

@@ -172,9 +172,7 @@ class MCALifeGraphViewController: UIViewController, UITextViewDelegate, ShouldDe
             }
         }
     }
-    
-    // TODO: This should be one function, not calling two
-    
+        
     fileprivate func checkForViewsFromFIR() {
         DispatchQueue.global(qos: .userInitiated).async {
             // Download file or perform expensive task

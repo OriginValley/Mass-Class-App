@@ -21,6 +21,7 @@
 		6B2EFEF4208D26CD006998B7 /* MCALifeGraphIconCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2EFEF3208D26CD006998B7 /* MCALifeGraphIconCodable.swift */; };
 		6B7B4BFD208D404A0051276F /* MCALifeGraphFirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7B4BFC208D404A0051276F /* MCALifeGraphFirebaseManager.swift */; };
 		6B7B4C00208D51C30051276F /* MCALifeGraphContentCanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7B4BFF208D51C20051276F /* MCALifeGraphContentCanvasView.swift */; };
+		6B80E7AD208FE208008A8608 /* MCAFirebaseImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B80E7AC208FE208008A8608 /* MCAFirebaseImageManager.swift */; };
 		6B8DAA6B208AF8D400390154 /* MCALifeGraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8DAA6A208AF8D400390154 /* MCALifeGraphViewController.swift */; };
 		6B8DAA6D208BC91100390154 /* MCALifeGraphSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8DAA6C208BC91100390154 /* MCALifeGraphSelectionViewController.swift */; };
 		6B8DAA77208BCB0D00390154 /* SlideInPresentationAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8DAA74208BCB0B00390154 /* SlideInPresentationAnimator.swift */; };
@@ -83,6 +84,7 @@
 		6B2EFEF3208D26CD006998B7 /* MCALifeGraphIconCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCALifeGraphIconCodable.swift; sourceTree = "<group>"; };
 		6B7B4BFC208D404A0051276F /* MCALifeGraphFirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCALifeGraphFirebaseManager.swift; sourceTree = "<group>"; };
 		6B7B4BFF208D51C20051276F /* MCALifeGraphContentCanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MCALifeGraphContentCanvasView.swift; path = "Mass Class App/Views/MCALifeGraphContentCanvasView.swift"; sourceTree = SOURCE_ROOT; };
+		6B80E7AC208FE208008A8608 /* MCAFirebaseImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCAFirebaseImageManager.swift; sourceTree = "<group>"; };
 		6B8DAA6A208AF8D400390154 /* MCALifeGraphViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCALifeGraphViewController.swift; sourceTree = "<group>"; };
 		6B8DAA6C208BC91100390154 /* MCALifeGraphSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCALifeGraphSelectionViewController.swift; sourceTree = "<group>"; };
 		6B8DAA74208BCB0B00390154 /* SlideInPresentationAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideInPresentationAnimator.swift; sourceTree = "<group>"; };
@@ -157,7 +159,6 @@
 				6B8DAA7E208C0CBB00390154 /* MCALifeGraphIconNoteView.swift */,
 				6B8DAA80208C166100390154 /* MCALifeImageIconView.swift */,
 				6B2EFEF3208D26CD006998B7 /* MCALifeGraphIconCodable.swift */,
-				6B7B4BFC208D404A0051276F /* MCALifeGraphFirebaseManager.swift */,
 			);
 			path = MCALifeGraphIcons;
 			sourceTree = "<group>";
@@ -231,6 +232,8 @@
 			isa = PBXGroup;
 			children = (
 				6B8DAA7A208BCBDA00390154 /* Constants.swift */,
+				6B7B4BFC208D404A0051276F /* MCALifeGraphFirebaseManager.swift */,
+				6B80E7AC208FE208008A8608 /* MCAFirebaseImageManager.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -710,6 +713,7 @@
 				6B2EFEF4208D26CD006998B7 /* MCALifeGraphIconCodable.swift in Sources */,
 				6B8DAA79208BCB0D00390154 /* SlideInPresentationManager.swift in Sources */,
 				D129657D2079B97B0005414B /* HomeViewController.swift in Sources */,
+				6B80E7AD208FE208008A8608 /* MCAFirebaseImageManager.swift in Sources */,
 				D129657F2079B9840005414B /* SignUpViewController.swift in Sources */,
 				6B8DAA81208C166100390154 /* MCALifeImageIconView.swift in Sources */,
 				6B0D3DDF20854C3D00AB3F1E /* UIViewExtension.swift in Sources */,

@@ -15,9 +15,7 @@ class MCALifeGraphIconNoteView: MCALifeGraphIconBaseView, UITextViewDelegate {
     
     convenience init(frame:CGRect, textToDisplay: String ) {
         self.init(frame: frame)
-        
-        // TODO: Better error handling here
-        
+                
         guard let iconTextView = textView else { return }
         
         iconTextView.text = textToDisplay
