@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="hMD-v3-ErU">
-    <device id="retina4_7" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="hxY-Ju-URQ">
+    <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -20,11 +20,11 @@
                         <viewControllerLayoutGuide type="bottom" id="cWV-nO-x9f"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Zg2-bL-PRd">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hf1-on-poq">
-                                <rect key="frame" x="160" y="579" width="55" height="30"/>
+                                <rect key="frame" x="160" y="724" width="55" height="30"/>
                                 <color key="backgroundColor" red="0.2470588235" green="0.67450980390000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Sign Up">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -34,19 +34,19 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0iC-Yr-4x0">
-                                <rect key="frame" x="87" y="318" width="200" height="30"/>
+                                <rect key="frame" x="87" y="391" width="200" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sWX-1N-KFc">
-                                <rect key="frame" x="87" y="356" width="200" height="30"/>
+                                <rect key="frame" x="87" y="429" width="200" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rbi-vz-ndh">
-                                <rect key="frame" x="168" y="394" width="38" height="30"/>
+                                <rect key="frame" x="168" y="467" width="38" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Login">
                                     <color key="titleColor" red="0.2470588235" green="0.67450980390000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -63,7 +63,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cTM-6G-or4">
-                                <rect key="frame" x="133" y="617" width="109" height="30"/>
+                                <rect key="frame" x="133" y="762" width="109" height="30"/>
                                 <state key="normal" title="Reset Password">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -106,7 +106,7 @@
                         <viewControllerLayoutGuide type="bottom" id="Fnw-1K-dnU"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Y1y-V3-dml">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yHr-LF-TVW">
@@ -181,7 +181,7 @@
                         <viewControllerLayoutGuide type="bottom" id="Xvs-kn-UFu"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="aan-kp-ee1">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F45-n3-r3E">
@@ -242,7 +242,7 @@
                         <viewControllerLayoutGuide type="bottom" id="hFW-hz-7s3"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="cwV-mJ-Kxh">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TjQ-Gc-DiE">
@@ -285,11 +285,11 @@
                         <viewControllerLayoutGuide type="bottom" id="mWc-lz-JK9"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="a1M-Cp-qBH">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xLt-JC-d4D">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="778"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t35-jl-Nm9">
                                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
@@ -331,7 +331,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YkR-1T-V3b" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3424.8000000000002" y="1350.6746626686659"/>
+            <point key="canvasLocation" x="7482" y="1985"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="4iS-3V-ASC">
@@ -342,7 +342,7 @@
                         <viewControllerLayoutGuide type="bottom" id="ecz-Vt-Y1y"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="zWe-ed-X6i">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tEA-eV-Z67">
@@ -445,7 +445,7 @@
                         <viewControllerLayoutGuide type="bottom" id="dG4-Id-xfk"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="jhv-2K-KZN">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0XQ-vy-9QA">
@@ -474,7 +474,7 @@
                         <viewControllerLayoutGuide type="bottom" id="HkJ-l9-JRJ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="iAI-pz-0TB">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="12h-MU-wU7">
@@ -503,7 +503,7 @@
                         <viewControllerLayoutGuide type="bottom" id="ICD-jU-iE7"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="M4Z-OX-jxV">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="MaslowTriangle" translatesAutoresizingMaskIntoConstraints="NO" id="ucG-gw-PeX">
@@ -536,7 +536,7 @@
                         <viewControllerLayoutGuide type="bottom" id="zQU-f5-BrY"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="EAa-04-cwk">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="As a general rule I am" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aiz-wc-I9u">
@@ -615,16 +615,16 @@
             </objects>
             <point key="canvasLocation" x="5784.8000000000002" y="1984.8575712143929"/>
         </scene>
-        <!--View Controller-->
+        <!--Life Graph Selector View Controller-->
         <scene sceneID="xrz-XF-XOE">
             <objects>
-                <viewController id="Zvt-gn-dSt" sceneMemberID="viewController">
+                <viewController id="Zvt-gn-dSt" customClass="MCALifeGraphSelectorViewController" customModule="Mass_Class_App" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="vBh-X2-b9m"/>
                         <viewControllerLayoutGuide type="bottom" id="thi-U6-23Y"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="dtk-p1-ZKz">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="science" translatesAutoresizingMaskIntoConstraints="NO" id="E3K-HV-9aD">
@@ -637,7 +637,8 @@
                                 <color key="backgroundColor" red="1" green="0.52070408782372857" blue="0.35830152359563372" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Map Future"/>
                                 <connections>
-                                    <segue destination="CsU-6G-nnz" kind="show" id="w5C-UG-ykE"/>
+                                    <action selector="futureButtonPressed:" destination="Zvt-gn-dSt" eventType="touchUpInside" id="HTO-fu-xRF"/>
+                                    <segue destination="VDb-zQ-xz8" kind="show" identifier="Future" id="A9A-Da-pav"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qXY-M3-Yzc">
@@ -646,7 +647,8 @@
                                 <color key="backgroundColor" red="0.80887917879088489" green="1" blue="0.17073277577459189" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Map Present"/>
                                 <connections>
-                                    <segue destination="ls0-Xt-0Xc" kind="show" id="BXT-8m-c4H"/>
+                                    <action selector="presentButtonPressed:" destination="Zvt-gn-dSt" eventType="touchUpInside" id="fku-aD-p9S"/>
+                                    <segue destination="VDb-zQ-xz8" kind="show" identifier="Present" id="Q5V-P1-56S"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FHN-3s-7Bv">
@@ -655,7 +657,8 @@
                                 <color key="backgroundColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Map Past"/>
                                 <connections>
-                                    <segue destination="EsZ-Ye-wYI" kind="show" id="cP2-gc-sWe"/>
+                                    <action selector="pastButtonPressed:" destination="Zvt-gn-dSt" eventType="touchUpInside" id="3ao-fJ-R28"/>
+                                    <segue destination="VDb-zQ-xz8" kind="show" identifier="Past" id="sJZ-8U-rMR"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -691,7 +694,7 @@
                         <viewControllerLayoutGuide type="bottom" id="fyQ-dC-18Z"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="6IJ-dp-q3l">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Map Future" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dpL-uZ-11q">
@@ -715,7 +718,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9lf-5M-Nfb" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="x6m-VA-ZMC">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -733,7 +736,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vFh-KF-PRO" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dWh-oZ-eDx">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -745,24 +748,6 @@
             </objects>
             <point key="canvasLocation" x="4836" y="1984.8575712143929"/>
         </scene>
-        <!--LifeGraphNav-->
-        <scene sceneID="ZlB-BG-XLL">
-            <objects>
-                <navigationController storyboardIdentifier="LifeGraphNav" title="LifeGraphNav" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="hMD-v3-ErU" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="rCw-uu-9wR">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="VDb-zQ-xz8" kind="relationship" relationship="rootViewController" id="U3A-c0-olf"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Q1T-my-WRY" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2485.5999999999999" y="1350.6746626686659"/>
-        </scene>
         <!--Life Graph Selection View Controller-->
         <scene sceneID="JVe-XK-4jG">
             <objects>
@@ -772,20 +757,20 @@
                         <viewControllerLayoutGuide type="bottom" id="rbq-D8-Pe3"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="1bu-tz-ImN">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Ljp-xN-weE">
-                                <rect key="frame" x="15" y="15" width="345" height="637"/>
+                                <rect key="frame" x="15" y="15" width="345" height="748"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add icons to chart your life" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="gO8-5L-WaN">
-                                        <rect key="frame" x="0.0" y="0.0" width="345" height="93.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="345" height="112.33333333333333"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="20"/>
                                         <color key="textColor" red="0.10588235294117647" green="0.2196078431372549" blue="0.32549019607843138" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wr0-a4-9Py">
-                                        <rect key="frame" x="0.0" y="108.5" width="345" height="94"/>
+                                        <rect key="frame" x="0.0" y="127.33333333333334" width="345" height="112"/>
                                         <color key="backgroundColor" red="0.68235294117647061" green="0.94117647058823528" blue="0.84313725490196079" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="18"/>
                                         <state key="normal" title="Add Icon">
@@ -796,7 +781,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rHK-Of-hZf">
-                                        <rect key="frame" x="0.0" y="217.5" width="345" height="93.5"/>
+                                        <rect key="frame" x="0.0" y="254.33333333333334" width="345" height="112.33333333333334"/>
                                         <color key="backgroundColor" red="0.34509803921568627" green="0.81176470588235294" blue="0.81176470588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="18"/>
                                         <state key="normal" title="Add Note">
@@ -807,7 +792,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kP0-Lc-tTo">
-                                        <rect key="frame" x="0.0" y="326" width="345" height="93.5"/>
+                                        <rect key="frame" x="0.0" y="381.66666666666669" width="345" height="112"/>
                                         <color key="backgroundColor" red="0.19607843137254902" green="0.4823529411764706" blue="0.78823529411764703" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="18"/>
                                         <state key="normal" title="Add Image">
@@ -818,7 +803,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2KX-cV-DbM">
-                                        <rect key="frame" x="0.0" y="434.5" width="345" height="94"/>
+                                        <rect key="frame" x="0.0" y="508.66666666666657" width="345" height="112.33333333333331"/>
                                         <color key="backgroundColor" red="0.28627450980392155" green="0.25490196078431371" blue="0.4392156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="18"/>
                                         <state key="normal" title="Change Background">
@@ -829,7 +814,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JDp-TL-zrH">
-                                        <rect key="frame" x="0.0" y="543.5" width="345" height="93.5"/>
+                                        <rect key="frame" x="0.0" y="636" width="345" height="112"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="18"/>
                                         <state key="normal" title="Cancel">
                                             <color key="titleColor" red="0.29803921568627451" green="0.38039215686274508" blue="0.63137254901960782" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -845,7 +830,7 @@
                         <constraints>
                             <constraint firstItem="Ljp-xN-weE" firstAttribute="leading" secondItem="1bu-tz-ImN" secondAttribute="leading" constant="15" id="Gny-PY-A1M"/>
                             <constraint firstAttribute="trailing" secondItem="Ljp-xN-weE" secondAttribute="trailing" constant="15" id="OrT-Qf-KZo"/>
-                            <constraint firstAttribute="bottom" secondItem="Ljp-xN-weE" secondAttribute="bottom" constant="15" id="QUa-5b-sNn"/>
+                            <constraint firstItem="rbq-D8-Pe3" firstAttribute="top" secondItem="Ljp-xN-weE" secondAttribute="bottom" constant="15" id="QUa-5b-sNn"/>
                             <constraint firstItem="Ljp-xN-weE" firstAttribute="top" secondItem="1bu-tz-ImN" secondAttribute="top" constant="15" id="bOm-5g-yhZ"/>
                         </constraints>
                     </view>
@@ -861,7 +846,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZVF-vx-1vo" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="0Vx-m3-IG0" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3436" y="2168"/>
+            <point key="canvasLocation" x="7481" y="2806"/>
         </scene>
     </scenes>
     <resources>
@@ -874,12 +859,13 @@
         <image name="SNCRICON" width="50" height="50"/>
         <image name="Settings" width="50" height="50"/>
         <image name="science" width="800" height="600"/>
-              <namedColor name="White Color">
+        <namedColor name="White Color">
             <color red="0.96899998188018799" green="0.96899998188018799" blue="0.96899998188018799" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Ohu-ZL-G1I"/>
+        <segue reference="sJZ-8U-rMR"/>
         <segue reference="beR-1q-6vA"/>
         <segue reference="d7R-4T-WIa"/>
         <segue reference="V5Z-ei-lQN"/>

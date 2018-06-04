@@ -10,6 +10,12 @@ import UIKit
 import Firebase
 import CodableFirebase
 
+enum LifeGraphOptions: String {
+    case past = "past"
+    case present = "present"
+    case future = "future"
+}
+
 class MCALifeGraphViewController: UIViewController, UITextViewDelegate, ShouldDeleteIcon {
 
     @IBOutlet weak var testTextView: UITextView!
@@ -17,39 +23,36 @@ class MCALifeGraphViewController: UIViewController, UITextViewDelegate, ShouldDe
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var contentView: UIView!
     
+    private let backgroundLightColor = UIColor(red: 227/255, green: 239/255, blue: 243/255, alpha: 1.0)
+    private let backgroundDarkColor = UIColor(red: 20/255, green: 58/255, blue: 82/255, alpha: 1)
+    
     lazy var slideInTransitioningDelegate = SlideInPresentationManager()
 
-    let firebaseViewManager = MCALifeGraphFirebaseManager()
+    private let firebaseViewManager = MCALifeGraphFirebaseManager()
     
-    var timer: Timer!
+    private var timer: Timer!
+    
+    var loadedGraph: LifeGraphOptions!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        let imageView = UIImageView(frame: contentView.frame)
-//        imageView.image = #imageLiteral(resourceName: "dots-polka-white-spots-blue-1920x1080-c2-ffffff-40e0d0-l2-15-34-a-315-f-3")
-//        contentView.addSubview(imageView)
-//        contentView.sendSubview(toBack: imageView)
+       checkForSavedBackgroundColor()
         
         checkForViewsFromFIR()
 
     }
-    
-
-    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         firebaseViewManager.contentView = contentView
     }
     
-    
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(true)
-        firebaseViewManager.uploadContentToFirebase()
+        firebaseViewManager.uploadContentToFirebase(for: loadedGraph)
         timer.invalidate()
     }
-    
     
     var contentOffset: CGFloat = 20
     
@@ -67,6 +70,30 @@ class MCALifeGraphViewController: UIViewController, UITextViewDelegate, ShouldDe
         }
     }
     
+    func loadGraphFor(_ graphPeriod: LifeGraphOptions) {
+        
+    }
+    
+    func checkForSavedBackgroundColor() {
+        let defaults = UserDefaults.standard
+        if defaults.bool(forKey: "shouldBeDarkBackgroundColor") {
+            self.contentView.backgroundColor = backgroundDarkColor
+        } else {
+            self.contentView.backgroundColor = backgroundLightColor
+        }
+    }
+    
+    func switchBackgroundColor() {
+        let defaults = UserDefaults.standard
+        let shouldBeDark = defaults.bool(forKey: "shouldBeDarkBackgroundColor")
+        if shouldBeDark {
+            defaults.set(false, forKey: "shouldBeDarkBackgroundColor")
+            self.contentView.backgroundColor = backgroundLightColor
+        } else {
+            defaults.set(true, forKey: "shouldBeDarkBackgroundColor")
+            self.contentView.backgroundColor = backgroundDarkColor
+        }
+    }
 
     func findOpenSpaceForNewView() {
         let newIconSize = Constants.graphIconDefaultSize
@@ -92,7 +119,7 @@ class MCALifeGraphViewController: UIViewController, UITextViewDelegate, ShouldDe
         checkViewForCollisions(view: newIcon)
         contentView.addSubview(newIcon)
         contentView.bringSubview(toFront: newIcon)
-        firebaseViewManager.uploadContentToFirebase()
+        firebaseViewManager.uploadContentToFirebase(for: self.loadedGraph)
 
     }
     
@@ -107,7 +134,7 @@ class MCALifeGraphViewController: UIViewController, UITextViewDelegate, ShouldDe
         checkViewForCollisions(view: newIcon)
         contentView.addSubview(newIcon)
         contentView.bringSubview(toFront: newIcon)
-        firebaseViewManager.uploadContentToFirebase()
+        firebaseViewManager.uploadContentToFirebase(for: self.loadedGraph)
 
     }
     
@@ -121,7 +148,7 @@ class MCALifeGraphViewController: UIViewController, UITextViewDelegate, ShouldDe
         checkViewForCollisions(view: newIcon)
         contentView.addSubview(newIcon)
         contentView.bringSubview(toFront: newIcon)
-        firebaseViewManager.uploadContentToFirebase()
+        firebaseViewManager.uploadContentToFirebase(for: self.loadedGraph)
 
     }
     
@@ -145,13 +172,11 @@ class MCALifeGraphViewController: UIViewController, UITextViewDelegate, ShouldDe
             }
         }
     }
-    
-    // TODO: This should be one function, not calling two
-    
+        
     fileprivate func checkForViewsFromFIR() {
         DispatchQueue.global(qos: .userInitiated).async {
             // Download file or perform expensive task
-            self.firebaseViewManager.decodeViewsFromFirebase(completion: { (contents) in
+            self.firebaseViewManager.decodeViewsFromFirebase(for: self.loadedGraph, completion: { (contents) in
                 print("this gets called")
                 if contents != nil {
                     let viewsToAdd = self.firebaseViewManager.convertModelToViews(contents!)
@@ -178,7 +203,7 @@ class MCALifeGraphViewController: UIViewController, UITextViewDelegate, ShouldDe
     func startAutoSaveTimer() {
         timer = Timer.scheduledTimer(withTimeInterval: 5, repeats: true, block: { (_) in
             print("uploading")
-            self.firebaseViewManager.uploadContentToFirebase()
+            self.firebaseViewManager.uploadContentToFirebase(for: self.loadedGraph)
         })
     }
     
@@ -186,7 +211,7 @@ class MCALifeGraphViewController: UIViewController, UITextViewDelegate, ShouldDe
         let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         let deleteAction = UIAlertAction(title: "Delete Icon", style: .destructive) { (action) in
             icon.removeFromSuperview()
-            self.firebaseViewManager.uploadContentToFirebase()
+            self.firebaseViewManager.uploadContentToFirebase(for: self.loadedGraph)
         }
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         actionSheet.addAction(deleteAction)
@@ -194,13 +219,5 @@ class MCALifeGraphViewController: UIViewController, UITextViewDelegate, ShouldDe
         self.present(actionSheet, animated: true, completion: nil)
     }
     
-    
-    func changeBackgroundToColor(_ color: UIColor) {
-        self.view.backgroundColor = color
-    }
 }
 
-
-protocol ShouldDeleteIcon {
-    func deleteIcon(_ icon: MCALifeGraphIconBaseView)
-}
